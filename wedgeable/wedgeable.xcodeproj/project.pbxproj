@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8882FEAE1EB548F2001B210A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAD1EB548F2001B210A /* Event.swift */; };
+		8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAF1EB54A42001B210A /* FollowUp.swift */; };
+		8882FEB21EB550A1001B210A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB11EB550A1001B210A /* Contact.swift */; };
 		88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DCF1EB5112700D7EAE2 /* colors.swift */; };
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
+		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
+		88BC8DDA1EB5412900D7EAE2 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD91EB5412900D7EAE2 /* ListCell.swift */; };
+		88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DDB1EB5418D00D7EAE2 /* Aspect.swift */; };
 		88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */; };
 		88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA401EB5109B00DFCF8C /* Main.storyboard */; };
 		88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA431EB5109B00DFCF8C /* wedgeable.xcdatamodeld */; };
@@ -29,9 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8882FEAD1EB548F2001B210A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8882FEAF1EB54A42001B210A /* FollowUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUp.swift; sourceTree = "<group>"; };
+		8882FEB11EB550A1001B210A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		88BC8DCF1EB5112700D7EAE2 /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		88BC8DD91EB5412900D7EAE2 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		88BC8DDB1EB5418D00D7EAE2 /* Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aspect.swift; sourceTree = "<group>"; };
 		88C6CA391EB5109B00DFCF8C /* wedgeable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wedgeable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C6CA411EB5109B00DFCF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +74,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8882FEAA1EB547FD001B210A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88BC8DDB1EB5418D00D7EAE2 /* Aspect.swift */,
+				8882FEAD1EB548F2001B210A /* Event.swift */,
+				8882FEAF1EB54A42001B210A /* FollowUp.swift */,
+				8882FEB11EB550A1001B210A /* Contact.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8882FEAB1EB54812001B210A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */,
+				88BC8DD91EB5412900D7EAE2 /* ListCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8882FEAC1EB54822001B210A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		88C6CA301EB5109B00DFCF8C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,9 @@
 		88C6CA3B1EB5109B00DFCF8C /* wedgeable */ = {
 			isa = PBXGroup;
 			children = (
+				8882FEAA1EB547FD001B210A /* Models */,
+				8882FEAB1EB54812001B210A /* Views */,
+				8882FEAC1EB54822001B210A /* Controllers */,
 				88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */,
 				88C6CA401EB5109B00DFCF8C /* Main.storyboard */,
 				88C6CA461EB5109B00DFCF8C /* Assets.xcassets */,
@@ -90,7 +133,6 @@
 				88C6CA4B1EB5109B00DFCF8C /* Info.plist */,
 				88C6CA431EB5109B00DFCF8C /* wedgeable.xcdatamodeld */,
 				88BC8DCF1EB5112700D7EAE2 /* colors.swift */,
-				88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */,
 				88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */,
 			);
 			path = wedgeable;
@@ -211,10 +253,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */,
+				8882FEAE1EB548F2001B210A /* Event.swift in Sources */,
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */,
+				88BC8DDA1EB5412900D7EAE2 /* ListCell.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
+				8882FEB21EB550A1001B210A /* Contact.swift in Sources */,
 				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
+				8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */,
+				88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */,
+				88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
