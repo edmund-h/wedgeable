@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DCF1EB5112700D7EAE2 /* colors.swift */; };
+		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
+		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */; };
-		88C6CA3F1EB5109B00DFCF8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA3E1EB5109B00DFCF8C /* ViewController.swift */; };
 		88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA401EB5109B00DFCF8C /* Main.storyboard */; };
 		88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA431EB5109B00DFCF8C /* wedgeable.xcdatamodeld */; };
 		88C6CA471EB5109B00DFCF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA461EB5109B00DFCF8C /* Assets.xcassets */; };
@@ -27,9 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88BC8DCF1EB5112700D7EAE2 /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88C6CA391EB5109B00DFCF8C /* wedgeable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wedgeable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88C6CA3E1EB5109B00DFCF8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88C6CA411EB5109B00DFCF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88C6CA441EB5109B00DFCF8C /* wedgeable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wedgeable.xcdatamodel; sourceTree = "<group>"; };
 		88C6CA461EB5109B00DFCF8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */,
-				88C6CA3E1EB5109B00DFCF8C /* ViewController.swift */,
 				88C6CA401EB5109B00DFCF8C /* Main.storyboard */,
 				88C6CA461EB5109B00DFCF8C /* Assets.xcassets */,
 				88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */,
 				88C6CA4B1EB5109B00DFCF8C /* Info.plist */,
 				88C6CA431EB5109B00DFCF8C /* wedgeable.xcdatamodeld */,
+				88BC8DCF1EB5112700D7EAE2 /* colors.swift */,
+				88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */,
+				88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */,
 			);
 			path = wedgeable;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88C6CA3F1EB5109B00DFCF8C /* ViewController.swift in Sources */,
+				88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */,
+				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
+				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +426,7 @@
 				88C6CA5B1EB5109B00DFCF8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88C6CA5C1EB5109B00DFCF8C /* Build configuration list for PBXNativeTarget "wedgeableTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +435,7 @@
 				88C6CA5E1EB5109B00DFCF8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
