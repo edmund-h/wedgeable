@@ -34,7 +34,7 @@ class Contact: Event, NeedsFollowUp {
         self.placeMet = metAt
         super.init(name: name, date: now, aspect: .contacts)
         if let event = fromEvent {
-            self.followUp = FollowUp(name: "Follow up on meeting \(name) for the first time.", forEvent: self)
+            self.followUp = FollowUp(forEvent: self)
         }
     }
 }

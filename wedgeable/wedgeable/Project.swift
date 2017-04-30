@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Project: Event {
+class Project: Event{
     enum Status: String {
-        case planning = "Planning/Research", inProgress = "Early Development", testing = "Pre-Release Testing", submitted = "Submitted", published = "Published", released = "Released", updating = "Updated Regularly", seekingInvestment = "Seeking Investment", incorporated = "Incorporated", sold = "Sold", lapsed = "Development Lapsed", mothballed = "Mothballed"
+        case planning = "Planning/Research", inProgress = "Early Development", testing = "Pre-Release Testing", submitted = "Submitted", published = "Published", released = "Released", updating = "Updated Regularly", seekingInvestment = "Seeking Investment", incorporated = "Incorporated", sold = "Sold", lapsed = "Development Lapsed", mothballed = "Mothballed", commits = "commits"
         
         static let all: [Project.Status] = [.planning, .inProgress, .testing, .submitted, .published, .released, .updating, .seekingInvestment, .incorporated, .sold, .lapsed, .mothballed]
     }
@@ -18,24 +18,21 @@ class Project: Event {
     var title: String {
         return self.name
     }
-    var nextGoal: Date {
+    var dateStarted: Date {
         return self.date
     }
     var status: Status
     var link: URL?
-    var dateStarted: Date
     var timeline: [TimelineEntry]
     var contributors: [String]
     var technologies: [String]
-    weak var goal: FollowUp?
+    var goal: TimelineEntry?//note that Project checks needsFollowUp differently. see mark for mor information
     
-    init (title: String, dateStarted: Date, nextGoal: Date) {
-        self.dateStarted = dateStarted
+    init (title: String, dateStarted: Date) {
         let milestone = Milestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).")
         timeline = [milestone]
         contributors = []
         technologies = []
-        self.goal = FollowUp(name: <#T##String#>, forEvent: <#T##Event#>)
         self.status = .planning
         super.init(name: title, date: dateStarted, aspect: .projects)
     }
@@ -69,13 +66,21 @@ class Project: Event {
         self.technologies.append(contentsOf: nameList)
     }
     
-    func setNextGoal(
+    func setNextGoal(ofType: Status, forDate date: Date)-> Bool {
+        if ofType == Status.commits {
+            self.goal = Commits(date: date, number: 1, description: "Put in some work on \(title)")
+            return true
+        } else {
+            self.goal = Milestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)")
+            return true
+        }
+    }
+    
 }
 
-// MARK: Helper Structs and Static Vars
+// MARK: Helper Structs
 
 extension Project {
-    
     
     struct Milestone: TimelineEntry {
         var status: Project.Status
