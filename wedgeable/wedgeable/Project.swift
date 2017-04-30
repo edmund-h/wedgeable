@@ -23,14 +23,14 @@ class Project: Event{
     }
     var status: Status
     var link: URL?
-    var timeline: [TimelineEntry]
+    weak var timeline: Timeline?
     var contributors: [String]
     var technologies: [String]
     var goal: TimelineEntry?//note that Project checks needsFollowUp differently. see mark for mor information
     
     init (title: String, dateStarted: Date) {
         let milestone = Milestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).")
-        timeline = [milestone]
+        self.timeline = Timeline(scope: .project(self))
         contributors = []
         technologies = []
         self.status = .planning
@@ -43,7 +43,7 @@ class Project: Event{
         if let description = description {
             newCommits.description = description
         }
-        timeline.append(newCommits)
+        if let timeline = timeline{timeline.append([newCommits])}
     }
     
     func addMilestone(of status: Status,date: Date, description: String?) {
@@ -53,7 +53,7 @@ class Project: Event{
             newMilestone.description = description
         }
         self.status = status
-        timeline.append(newMilestone)
+        if let timeline = timeline{timeline.append([newMilestone])}
     }
     
     func addContributors(named names: String) {
@@ -78,25 +78,5 @@ class Project: Event{
     
 }
 
-// MARK: Helper Structs
 
-extension Project {
-    
-    struct Milestone: TimelineEntry {
-        var status: Project.Status
-        var date: Date
-        var description: String
-    }
-    
-    struct Commits: TimelineEntry {
-        var date: Date
-        var number: Int
-        var description: String
-        
-    }
-}
 
-protocol TimelineEntry {
-    var date: Date { get set }
-    var description: String { get set }
-}

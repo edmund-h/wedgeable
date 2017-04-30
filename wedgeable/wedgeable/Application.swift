@@ -8,10 +8,16 @@
 
 import Foundation
 
-class Application {
+class Application: Event {
     var company: String
     var position: String
-    var dateApplied: Date
     var postingURL: URL?
+    weak var timeline: Timeline
+    var dateApplied: Date{
+        return self.date
+    }
     
+    init {
+        
+    }
 }

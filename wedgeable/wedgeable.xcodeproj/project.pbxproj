@@ -26,6 +26,7 @@
 		88C6CA471EB5109B00DFCF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA461EB5109B00DFCF8C /* Assets.xcassets */; };
 		88C6CA4A1EB5109B00DFCF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */; };
 		88C6CA551EB5109B00DFCF8C /* wedgeableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */; };
+		88FA1D841EB5AC2600100B32 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA1D831EB5AC2600100B32 /* Timeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		88C6CA501EB5109B00DFCF8C /* wedgeableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wedgeableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wedgeableTests.swift; sourceTree = "<group>"; };
 		88C6CA561EB5109B00DFCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FA1D831EB5AC2600100B32 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				8882FEB61EB571DA001B210A /* BlogPost.swift */,
 				8882FEB81EB57A8A001B210A /* Project.swift */,
 				8882FEBC1EB5982B001B210A /* Application.swift */,
+				88FA1D831EB5AC2600100B32 /* Timeline.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FA1D841EB5AC2600100B32 /* Timeline.swift in Sources */,
 				8882FEBD1EB5982B001B210A /* Application.swift in Sources */,
 				88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */,
 				8882FEAE1EB548F2001B210A /* Event.swift in Sources */,
