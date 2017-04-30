@@ -10,7 +10,7 @@ import Foundation
 
 class Event {
     
-    let name: String
+    var name: String
     var date: Date
     var aspect: Aspect
     

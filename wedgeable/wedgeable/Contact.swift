@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Contact: Event {
+class Contact: Event, NeedsFollowUp {
     var placeMet: String
     var position: String?
     var company: String?
@@ -20,6 +20,13 @@ class Contact: Event {
     
     var dateMet: Date{
         return self.date
+    }
+    var description: String {
+        var qualifier = ", from \(placeMet)"
+        if let position = position, let company = company {
+            qualifier = ", \(position) at \(company)"
+        }
+        return self.name + qualifier
     }
     
     init(name: String, metAt: String, fromEvent: Event?) {
