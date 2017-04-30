@@ -29,8 +29,9 @@ class Project: Event{
     var goal: TimelineEntry?//note that Project checks needsFollowUp differently. see mark for mor information
     
     init (title: String, dateStarted: Date) {
-        let milestone = Milestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).")
-        self.timeline = Timeline(scope: .project(self))
+        let milestone = ProjectMilestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).")
+        self.timeline = Timeline(scope: .projects)
+        timeline?.append([milestone])
         contributors = []
         technologies = []
         self.status = .planning
@@ -48,7 +49,7 @@ class Project: Event{
     
     func addMilestone(of status: Status,date: Date, description: String?) {
         let desc = "\(status.rawValue) on \(date)"
-        var newMilestone = Milestone(status: status, date: date, description: desc)
+        var newMilestone = ProjectMilestone(status: status, date: date, description: desc)
         if let description = description {
             newMilestone.description = description
         }
@@ -71,7 +72,7 @@ class Project: Event{
             self.goal = Commits(date: date, number: 1, description: "Put in some work on \(title)")
             return true
         } else {
-            self.goal = Milestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)")
+            self.goal = ProjectMilestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)")
             return true
         }
     }

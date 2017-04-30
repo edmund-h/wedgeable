@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Appointment: Event, NeedsFollowUp {
+class Appointment: Event, NeedsFollowUp, TimelineEntry {
     
     enum OfType: String {
         case meetup = "Meetup", interview = "Interview", informalMeeting = "Informal Meeting", coachMeeting = "Coach Meeting", other = ""
@@ -19,6 +19,7 @@ class Appointment: Event, NeedsFollowUp {
     var duration: Double
     weak var associatedContact: Contact?
     weak var followUp: FollowUp?
+    
     
     var startDate: Date {
         return self.date
@@ -46,6 +47,10 @@ class Appointment: Event, NeedsFollowUp {
     func setCompleted() {
         self.completed = true
         self.followUp = FollowUp(forEvent: self)
+    }
+    
+    func setOtherType() {
+        
     }
     
 }

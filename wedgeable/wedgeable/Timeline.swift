@@ -9,33 +9,61 @@
 import Foundation
 
 class Timeline {
-    enum Scope {
-        case application (Application), project (Project)
-    }
     
-    let scope: Scope
-    var collection = [TimelineEntry]()
+    let scope: Aspect
+    var collection: [Date:[TimelineEntry]] = [:]
     
-    init (scope: Scope) {
+    init (scope: Aspect) {
         self.scope = scope
     }
     
+//    func append(_ elements: [TimelineEntry]){
+//        guard !elements.isEmpty else {return}
+//        var elements = elements
+//        if collection.isEmpty {collection.append(elements.popLast()!)}
+//        while elements.count > 0 {
+//            guard let element = elements.popLast() else {break}
+//            if let index = collection.index(where: { $0.date > element.date }){
+//                //todo: use binary search instead, .index is O(n^tastic)
+//                collection.insert(element, at: index)
+//            } else { collection.append(element) }
+//        }
+//    }
+//    
+//    func binarySearch(date: Date)-> Int? {
+//        var min = 0
+//        var max = collection.count - 1
+//        if min > max {
+//    }
+    
     func append(_ elements: [TimelineEntry]){
-        guard !elements.isEmpty else {return}
-        var elements = elements
-        if collection.isEmpty {collection.append(elements.popLast()!)}
-        while elements.count > 0 {
-            guard let element = elements.popLast() else {break}
-            if let index = collection.index(where: { $0.date > element.date }){
-                //todo: use binary search instead, .index is O(n^tastic)
-                collection.insert(element, at: index)
-            } else { elements.append(element) }
-        }
+        elements.forEach({
+            if var place = collection[$0.date]{
+                place.append($0)
+                collection[$0.date] = place
+            } else {
+                collection[$0.date] = [$0]
+            }
+        })
     }
+    
+    func append(timeline: Timeline){
+        timeline.collection.keys.forEach({
+            guard let elems = timeline.collection[$0] else {return}
+            self.append(elems)
+        })
+    }
+    
     
 }
 
-struct Milestone: TimelineEntry {
+struct ApplyMilestone: TimelineEntry {
+    var status: Application.Status
+    var date: Date
+    var description: String
+}
+
+struct ProjectMilestone: TimelineEntry {
     var status: Project.Status
     var date: Date
     var description: String
@@ -50,5 +78,5 @@ struct Commits: TimelineEntry {
 
 protocol TimelineEntry {
     var date: Date { get set }
-    var description: String { get set }
+    var description: String { get }
 }

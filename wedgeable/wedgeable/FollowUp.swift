@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FollowUp: Event {
+class FollowUp: Event, TimelineEntry {
     unowned var event: Event
     enum Method: String {
         case phone = "Phone", email = "eMail", inPerson = "In Person", socialMedia = "Social Media", mail = "Mail", gift = "Gift", goal = "Goal"
@@ -29,9 +29,7 @@ class FollowUp: Event {
         return "\(needed) follow-up on \(event.name)"
     }
     
-    init? (forEvent event: Event) {
-        guard event.aspect != Aspect.profile else { return nil }
-        
+    init (forEvent event: Event) {
         self.event = event
         self.complete = false
         let date = event.date.addingTimeInterval(86400) //1 day in seconds

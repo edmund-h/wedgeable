@@ -27,6 +27,7 @@
 		88C6CA4A1EB5109B00DFCF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */; };
 		88C6CA551EB5109B00DFCF8C /* wedgeableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */; };
 		88FA1D841EB5AC2600100B32 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA1D831EB5AC2600100B32 /* Timeline.swift */; };
+		88FBC5401EB66C74003106E5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBC53F1EB66C74003106E5 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wedgeableTests.swift; sourceTree = "<group>"; };
 		88C6CA561EB5109B00DFCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88FA1D831EB5AC2600100B32 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		88FBC53F1EB66C74003106E5 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */,
 				88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */,
 				88C6CA4B1EB5109B00DFCF8C /* Info.plist */,
+				88FBC53F1EB66C74003106E5 /* Date.swift */,
 			);
 			name = Essentials;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				8882FEAE1EB548F2001B210A /* Event.swift in Sources */,
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				8882FEB51EB56941001B210A /* Appointment.swift in Sources */,
+				88FBC5401EB66C74003106E5 /* Date.swift in Sources */,
 				8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */,
 				8882FEB91EB57A8A001B210A /* Project.swift in Sources */,
 				88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */,

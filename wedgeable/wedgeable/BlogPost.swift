@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BlogPost: Event {
+class BlogPost: Event, TimelineEntry {
     
     enum Status: String {
         case finished = "Finished", inProgress = "In Progress", planned = "Planned"
@@ -29,7 +29,10 @@ class BlogPost: Event {
         case .inProgress:
             return "Blog post \(withTopic)due \(dueDate)"
         case .finished:
-            return "\(self.name) (published \(datePublished))"
+            if let datePublished = datePublished{
+                return "\(self.name) (published \(datePublished))"
+            }
+            else {return "\(self.name)"}
         }
     }
     
