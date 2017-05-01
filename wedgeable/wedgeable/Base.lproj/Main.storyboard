@@ -79,7 +79,7 @@
                                         </constraints>
                                         <state key="normal" title="appointments"/>
                                         <connections>
-                                            <segue destination="wW8-b4-yyy" kind="show" identifier="meetupSegue" id="cU9-bH-6fE"/>
+                                            <segue destination="wW8-b4-yyy" kind="show" identifier="appointmentSegue" id="cU9-bH-6fE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2k-ay-sTy">
@@ -123,15 +123,28 @@
                                 <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VwL-DV-jVY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FollowUpCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" textLabel="D0Q-7g-jbY" style="IBUITableViewCellStyleDefault" id="VwL-DV-jVY">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="followUpCell" tableViewCell="VwL-DV-jVY" id="CdM-Ii-w5O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D0Q-7g-jbY">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y08-j4-ViI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zcE-Ed-OEy"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,10 +166,10 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wW8-b4-yyy" kind="show" identifier="profileSegue" id="l7q-Xv-9l2"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="wW8-b4-yyy" kind="show" identifier="profileSegue" id="Czo-cy-4NW"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -164,16 +177,16 @@
             </objects>
             <point key="canvasLocation" x="964" y="35.532233883058474"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Section View Controller-->
         <scene sceneID="KcX-xO-uge">
             <objects>
-                <tableViewController id="wW8-b4-yyy" sceneMemberID="viewController">
+                <tableViewController id="wW8-b4-yyy" customClass="SectionViewController" customModule="wedgeable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="1" sectionFooterHeight="1" id="FsK-Br-jb1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="SgA-d3-8hL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="SgA-d3-8hL" customClass="InfoCell" customModule="wedgeable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SgA-d3-8hL" id="gnw-wG-bat">
@@ -181,7 +194,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="giy-se-rwT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="giy-se-rwT" customClass="ListCell" customModule="wedgeable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="57" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giy-se-rwT" id="YRL-Aa-5fH">
@@ -222,6 +235,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Czo-cy-4NW"/>
+        <segue reference="l7q-Xv-9l2"/>
     </inferredMetricsTieBreakers>
 </document>

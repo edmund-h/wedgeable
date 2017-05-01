@@ -16,7 +16,30 @@ class MainViewController: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else {return}
+        let dest = segue.destination as! SectionViewController
+        switch id {
+        case "applicationSegue":
+            dest.aspect = [.applications]
+        case "appointmentSegue":
+            dest.aspect = [.appointments]
+        case "contactSegue":
+            dest.aspect = [.contacts]
+        case "followUpSegue":
+            dest.aspect = [.followups]
+        case "projectSegue":
+            dest.aspect = [.projects]
+        case "blogSegue":
+            dest.aspect = [.blogposts]
+        case "profileSegue":
+            NSLog("%@", "lolwuuuut")
+            dest.aspect = Aspect.all
+        default:
+            NSLog("%@", "MainView segue with bad identifier!")
+            return
+        }
+    }
     
 }
 
@@ -27,11 +50,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        cell.textLabel?.text = "\(indexPath.row)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //schedule cell will take the user to an event that is scheduled for that day
+        //this will be the "upcoming events" view which will contain cells for each event in the upcoming 7 days.
     }
+    
 }

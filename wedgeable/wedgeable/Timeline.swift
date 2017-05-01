@@ -38,9 +38,9 @@ class Timeline {
     
     func append(_ elements: [TimelineEntry]){
         elements.forEach({
-            if var place = collection[$0.date]{
-                place.append($0)
-                collection[$0.date] = place
+            if var entries = collection[$0.date]{
+                entries.append($0)
+                collection[$0.date] = entries
             } else {
                 collection[$0.date] = [$0]
             }

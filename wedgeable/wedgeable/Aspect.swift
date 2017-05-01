@@ -13,5 +13,23 @@ enum Aspect {
     
     static let all = [Aspect.profile, Aspect.contacts, Aspect.applications, Aspect.followups, Aspect.appointments, Aspect.blogposts, Aspect.projects]
     
+    func getAspectView()-> InfoView{
+        switch self {
+        case .profile:
+            return ProfileView()
+        case .contacts:
+            return ContactsView()
+        case .applications:
+            return ApplicationsView()
+        case .followups:
+            return FollowUpsView()
+        case.appointments:
+            return AppointmentsView()
+        case .blogposts:
+            return BlogPostsView()
+        case .projects:
+            return ProjectsView()
+        }
+    }
     
 }

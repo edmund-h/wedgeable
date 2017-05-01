@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
+		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
+		886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */; };
+		886360C71EB79BA80011A7C9 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C61EB79BA80011A7C9 /* ProjectsView.swift */; };
+		886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C81EB79BF40011A7C9 /* FollowUpsView.swift */; };
+		886360CB1EB79C160011A7C9 /* AppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360CA1EB79C160011A7C9 /* AppointmentsView.swift */; };
+		886360CD1EB79C240011A7C9 /* ApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360CC1EB79C240011A7C9 /* ApplicationsView.swift */; };
+		886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */; };
+		886360D51EB7AB600011A7C9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360D41EB7AB600011A7C9 /* ProfileView.swift */; };
+		886360D91EB7C42A0011A7C9 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360D81EB7C42A0011A7C9 /* TimelineCell.swift */; };
 		8882FEAE1EB548F2001B210A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAD1EB548F2001B210A /* Event.swift */; };
 		8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAF1EB54A42001B210A /* FollowUp.swift */; };
 		8882FEB21EB550A1001B210A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB11EB550A1001B210A /* Contact.swift */; };
@@ -41,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
+		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
+		886360C61EB79BA80011A7C9 /* ProjectsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		886360C81EB79BF40011A7C9 /* FollowUpsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUpsView.swift; sourceTree = "<group>"; };
+		886360CA1EB79C160011A7C9 /* AppointmentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsView.swift; sourceTree = "<group>"; };
+		886360CC1EB79C240011A7C9 /* ApplicationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsView.swift; sourceTree = "<group>"; };
+		886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		886360D41EB7AB600011A7C9 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		886360D81EB7C42A0011A7C9 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		8882FEAD1EB548F2001B210A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8882FEAF1EB54A42001B210A /* FollowUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUp.swift; sourceTree = "<group>"; };
 		8882FEB11EB550A1001B210A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -98,6 +118,7 @@
 				8882FEB81EB57A8A001B210A /* Project.swift */,
 				8882FEBC1EB5982B001B210A /* Application.swift */,
 				88FA1D831EB5AC2600100B32 /* Timeline.swift */,
+				886360BA1EB789580011A7C9 /* Contactable.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -107,6 +128,14 @@
 			children = (
 				88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */,
 				88BC8DD91EB5412900D7EAE2 /* ListCell.swift */,
+				886360D81EB7C42A0011A7C9 /* TimelineCell.swift */,
+				886360C21EB79B2F0011A7C9 /* ContactsView.swift */,
+				886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */,
+				886360C61EB79BA80011A7C9 /* ProjectsView.swift */,
+				886360C81EB79BF40011A7C9 /* FollowUpsView.swift */,
+				886360CA1EB79C160011A7C9 /* AppointmentsView.swift */,
+				886360CC1EB79C240011A7C9 /* ApplicationsView.swift */,
+				886360D41EB7AB600011A7C9 /* ProfileView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -115,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */,
+				886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +310,8 @@
 			files = (
 				88FA1D841EB5AC2600100B32 /* Timeline.swift in Sources */,
 				8882FEBD1EB5982B001B210A /* Application.swift in Sources */,
+				886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */,
+				886360BB1EB789580011A7C9 /* Contactable.swift in Sources */,
 				88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */,
 				8882FEAE1EB548F2001B210A /* Event.swift in Sources */,
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
@@ -287,14 +319,22 @@
 				88FBC5401EB66C74003106E5 /* Date.swift in Sources */,
 				8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */,
 				8882FEB91EB57A8A001B210A /* Project.swift in Sources */,
+				886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */,
 				88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */,
 				88BC8DDA1EB5412900D7EAE2 /* ListCell.swift in Sources */,
+				886360D51EB7AB600011A7C9 /* ProfileView.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
 				8882FEB21EB550A1001B210A /* Contact.swift in Sources */,
+				886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */,
+				886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */,
 				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
 				8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */,
+				886360C71EB79BA80011A7C9 /* ProjectsView.swift in Sources */,
+				886360CB1EB79C160011A7C9 /* AppointmentsView.swift in Sources */,
 				88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */,
+				886360D91EB7C42A0011A7C9 /* TimelineCell.swift in Sources */,
 				88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */,
+				886360CD1EB79C240011A7C9 /* ApplicationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

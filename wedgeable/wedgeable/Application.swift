@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Application: Event, NeedsFollowUp {
+class Application: Event, NeedsFollowUp, Contactable {
     
     enum Status: String {
         case coldAppl = "Cold Application", informedAppl = "Informed Application", referAppl = "Referral Application", invitedAppl = "Invited Application"
@@ -20,6 +20,7 @@ class Application: Event, NeedsFollowUp {
     var company: String
     var position: String
     var postingURL: URL?
+    var contactInfo: [FollowUp.Method : String] = [:]
     weak var timeline: Timeline?
     weak var followUp: FollowUp?
     var dateApplied: Date{
@@ -39,5 +40,11 @@ class Application: Event, NeedsFollowUp {
         let milestone = ApplyMilestone(status: status, date: date, description: des)
         timeline?.append([milestone])
         self.followUp = FollowUp(forEvent: self)
+    }
+    
+    func addContactInfo(from text: String, with method: FollowUp.Method?) {
+        var contactString = ""
+        if let method = method{ contactString += "\(method.rawValue): " }
+        contactString += text
     }
 }
