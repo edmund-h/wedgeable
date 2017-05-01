@@ -12,7 +12,11 @@ class ListCell: UITableViewCell {
     
     var event: Event? = nil {
         didSet {
-            
+            //this is to test what kind of logic these cells will use once we are actually using data
+            self.textLabel?.text = event?.name
+            if let event = event, event.aspect == .followups {
+                self.backgroundColor = UIColor.magenta
+            }
         }
     }
     

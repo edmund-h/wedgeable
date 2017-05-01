@@ -16,14 +16,14 @@ class SectionViewController: UITableViewController {
     var aspect: [Aspect]!
     var events: [Event] = [
         Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .blogposts ),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .applications),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups)
+        Event(name: "loll", date: Date(timeIntervalSinceNow: 0), aspect: .blogposts ),
+        Event(name: "lolll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+        Event(name: "llol", date: Date(timeIntervalSinceNow: 0), aspect: .applications),
+        Event(name: "lllol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
+        Event(name: "lloll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+        Event(name: "lllolll", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
+        Event(name: "loool", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+        Event(name: "lolol", date: Date(timeIntervalSinceNow: 0), aspect: .followups)
     ]
     
     override func viewDidLoad() {
@@ -60,6 +60,19 @@ class SectionViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row < aspect.count {
+            return self.view.bounds.height * 0.5
+        }
+        return self.view.bounds.height / 12
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row < aspect.count {
+            return false
+        }
+        return true
+    }
 
     /*
     // Override to support conditional editing of the table view.

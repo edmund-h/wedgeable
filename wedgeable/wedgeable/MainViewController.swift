@@ -33,7 +33,6 @@ class MainViewController: UIViewController {
         case "blogSegue":
             dest.aspect = [.blogposts]
         case "profileSegue":
-            NSLog("%@", "lolwuuuut")
             dest.aspect = Aspect.all
         default:
             NSLog("%@", "MainView segue with bad identifier!")
