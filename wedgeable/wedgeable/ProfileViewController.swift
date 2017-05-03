@@ -9,14 +9,16 @@
 import UIKit
 
 class ProfileViewController: UITableViewController {
-
+    
+    var profile: Profile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        let myProfile = Profile.getProfile()
+        self.profile = myProfile
+        self.title = myProfile.name
+        // TODO: Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
