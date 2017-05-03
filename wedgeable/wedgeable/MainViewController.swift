@@ -21,19 +21,19 @@ class MainViewController: UIViewController {
         let dest = segue.destination as! SectionViewController
         switch id {
         case "applicationSegue":
-            dest.aspect = [.applications]
+            dest.aspect = .applications
         case "appointmentSegue":
-            dest.aspect = [.appointments]
+            dest.aspect = .appointments
         case "contactSegue":
-            dest.aspect = [.contacts]
+            dest.aspect = .contacts
         case "followUpSegue":
-            dest.aspect = [.followups]
+            dest.aspect = .followups
         case "projectSegue":
-            dest.aspect = [.projects]
+            dest.aspect = .projects
         case "blogSegue":
-            dest.aspect = [.blogposts]
-        case "profileSegue":
-            dest.aspect = Aspect.all
+            dest.aspect = .blogposts
+//        case "profileSegue":
+//            return
         default:
             NSLog("%@", "MainView segue with bad identifier!")
             return
