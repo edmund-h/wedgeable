@@ -10,6 +10,6 @@ import UIKit
 
 
 extension UIColor {
-    static let wallGreen = UIColor(red: 197, green: 245, blue: 144, alpha: 1)
-    static let slashBlue = UIColor(red: 45, green: 156, blue: 219, alpha: 1)
+    static let wallGreen = UIColor(red: 197/255, green: 245/255, blue: 144/255, alpha: 1)
+    static let slashBlue = UIColor(red: 45/255, green: 156/255, blue: 219/255, alpha: 1)
 }
