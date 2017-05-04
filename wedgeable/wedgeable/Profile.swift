@@ -19,7 +19,7 @@ struct Profile {
     var gitURL: URL?
     //weak var settings: Settings
     
-    static var data = UserDefaults()
+    static var data = UserDefaults.standard
     
     private init(name: String, start: Date, end: Date, sheet: URL?, git: URL?) {
         self.name = name
@@ -47,7 +47,7 @@ struct Profile {
     
     static func getProfile()-> Profile {
         return Profile(
-            name: data.string(forKey: "name") ?? "NULL USER",
+            name: data.string(forKey: "name") ?? "",
             start: Date(timeIntervalSince1970: data.double(forKey: "start")),
             end: Date(timeIntervalSince1970: data.double(forKey: "start")),
             sheet: data.url(forKey: "sheet"),

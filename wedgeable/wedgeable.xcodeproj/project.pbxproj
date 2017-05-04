@@ -20,6 +20,7 @@
 		886360DD1EBA695D0011A7C9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360DC1EBA695D0011A7C9 /* EventViewController.swift */; };
 		886360DF1EBA6C160011A7C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */; };
 		886360E11EBA7C000011A7C9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360E01EBA7C000011A7C9 /* Profile.swift */; };
+		886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */; };
 		8882FEAE1EB548F2001B210A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAD1EB548F2001B210A /* Event.swift */; };
 		8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAF1EB54A42001B210A /* FollowUp.swift */; };
 		8882FEB21EB550A1001B210A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB11EB550A1001B210A /* Contact.swift */; };
@@ -67,6 +68,7 @@
 		886360DC1EBA695D0011A7C9 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		886360E01EBA7C000011A7C9 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8882FEAD1EB548F2001B210A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8882FEAF1EB54A42001B210A /* FollowUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUp.swift; sourceTree = "<group>"; };
 		8882FEB11EB550A1001B210A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */,
 				886360DC1EBA695D0011A7C9 /* EventViewController.swift */,
 				886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */,
+				886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				886360DD1EBA695D0011A7C9 /* EventViewController.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
 				8882FEB21EB550A1001B210A /* Contact.swift in Sources */,
+				886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */,
 				886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */,
 				886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */,
 				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
