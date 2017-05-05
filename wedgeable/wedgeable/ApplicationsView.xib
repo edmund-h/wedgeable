@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplicationsView" customModule="wedgeable" customModuleProvider="target">
+            <connections>
+                <outlet property="applBreakdownLabel" destination="Iai-TS-U6w" id="R0o-00-0eh"/>
+                <outlet property="applBreakdownView" destination="huP-cX-fXn" id="gPu-qa-uvc"/>
+                <outlet property="applNeedFollowup" destination="dfe-KJ-DhD" id="ZqU-MY-YEa"/>
+                <outlet property="applOpenLabel" destination="jsz-wV-43Y" id="VPD-qq-iFP"/>
+                <outlet property="applTotalLabel" destination="eVF-Rz-9lP" id="9qL-PR-AQM"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="rbh-eJ-cTf"/>
+                <outlet property="interviewBreakdown" destination="AVj-4r-XOU" id="xNe-X8-62X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-dG-mwn">
+                    <rect key="frame" x="140" y="20" width="95" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huP-cX-fXn">
+                    <rect key="frame" x="37" y="71" width="300" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakdown of open applications by status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iai-TS-U6w">
+                    <rect key="frame" x="37" y="104" width="219" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__ open applications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsz-wV-43Y">
+                    <rect key="frame" x="36.5" y="142.5" width="122" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-Rz-9lP">
+                    <rect key="frame" x="309" y="142.5" width="27.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__ interviews (## HR, ## Technical, ## other)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVj-4r-XOU">
+                    <rect key="frame" x="36.5" y="224.5" width="271.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__ applications need followup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-KJ-DhD">
+                    <rect key="frame" x="36.5" y="183.5" width="176.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.7725490196" green="0.96078431369999995" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="huP-cX-fXn" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.075" id="0B0-yZ-OFc"/>
+                <constraint firstItem="jsz-wV-43Y" firstAttribute="top" secondItem="Iai-TS-U6w" secondAttribute="bottom" constant="25" id="46S-QL-teX"/>
+                <constraint firstItem="dfe-KJ-DhD" firstAttribute="leading" secondItem="jsz-wV-43Y" secondAttribute="leading" id="5V7-jO-sg6"/>
+                <constraint firstItem="huP-cX-fXn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="By6-ll-VdL"/>
+                <constraint firstItem="AVj-4r-XOU" firstAttribute="leading" secondItem="dfe-KJ-DhD" secondAttribute="leading" id="Lgi-9c-cxz"/>
+                <constraint firstItem="Qcp-dG-mwn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TGU-D6-spF"/>
+                <constraint firstItem="Iai-TS-U6w" firstAttribute="top" secondItem="huP-cX-fXn" secondAttribute="bottom" constant="8" id="U9x-iA-tHJ"/>
+                <constraint firstItem="Iai-TS-U6w" firstAttribute="leading" secondItem="huP-cX-fXn" secondAttribute="leading" id="aFV-eN-uto"/>
+                <constraint firstItem="jsz-wV-43Y" firstAttribute="leading" secondItem="huP-cX-fXn" secondAttribute="leading" id="dTp-Qw-Tp1"/>
+                <constraint firstItem="huP-cX-fXn" firstAttribute="top" secondItem="Qcp-dG-mwn" secondAttribute="bottom" constant="30" id="elq-ss-5C7"/>
+                <constraint firstItem="Qcp-dG-mwn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="hXg-kO-MOo"/>
+                <constraint firstItem="eVF-Rz-9lP" firstAttribute="centerY" secondItem="jsz-wV-43Y" secondAttribute="centerY" id="hdX-2c-DjY"/>
+                <constraint firstItem="dfe-KJ-DhD" firstAttribute="top" secondItem="jsz-wV-43Y" secondAttribute="bottom" constant="25" id="kKv-FI-YY4"/>
+                <constraint firstItem="AVj-4r-XOU" firstAttribute="top" secondItem="dfe-KJ-DhD" secondAttribute="bottom" constant="25" id="rVa-zN-VwO"/>
+                <constraint firstItem="huP-cX-fXn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="w58-rS-ibm"/>
+                <constraint firstItem="eVF-Rz-9lP" firstAttribute="trailing" secondItem="huP-cX-fXn" secondAttribute="trailing" id="ysl-2N-6Pm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="81.5" y="59"/>
+        </view>
+    </objects>
+</document>

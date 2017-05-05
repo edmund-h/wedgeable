@@ -21,6 +21,9 @@ class FollowUpsView: UIView, InfoView {
     }
     */
     
+    func commonInit() {
+        
+    }
     
     func formatSelf() {
         self.backgroundColor = UIColor.red

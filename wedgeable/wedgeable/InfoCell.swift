@@ -35,7 +35,7 @@ class InfoCell: UITableViewCell {
 
 
 protocol InfoView {
-    func formatSelf()
+    func commonInit()
 }
 
 extension InfoView {
@@ -47,6 +47,5 @@ extension InfoView {
         me.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         me.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         me.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        self.formatSelf()
     }
 }

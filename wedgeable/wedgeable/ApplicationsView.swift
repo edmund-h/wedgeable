@@ -14,15 +14,36 @@ class ApplicationsView: UIView, InfoView {
      
      This will be a large view overviewing all applications you have submitted out so far. It will show how many reached certain milestones, statistics like applied vs responded and responded vs interviewed, and whether your weekly goal has been met
      
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
     */
+
+    @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var applBreakdownView: UIView!
+    @IBOutlet weak var applBreakdownLabel: UILabel!
+    @IBOutlet weak var applOpenLabel: UILabel!
+    @IBOutlet weak var applTotalLabel: UILabel!
+    @IBOutlet weak var applNeedFollowup: UILabel!
+    @IBOutlet weak var interviewBreakdown: UILabel!
     
-    func formatSelf() {
-        self.backgroundColor = UIColor.blue
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        Bundle.main.loadNibNamed("ApplicationsView", owner: self, options: nil)
+        
+        self.addSubview(contentView)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.backgroundColor = UIColor.slashBlue
     }
 }

@@ -22,6 +22,10 @@ class ProjectsView: UIView, InfoView {
     */
     
     
+    func commonInit() {
+        
+    }
+    
     func formatSelf() {
         self.backgroundColor = UIColor.green
     }

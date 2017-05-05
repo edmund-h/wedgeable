@@ -23,6 +23,10 @@ class ContactsView: UIView, InfoView {
     }
     */
     
+    func commonInit() {
+        
+    }
+    
     func formatSelf() {
         self.backgroundColor = UIColor.cyan
     }

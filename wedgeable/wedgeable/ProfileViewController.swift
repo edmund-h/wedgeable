@@ -36,7 +36,7 @@ class ProfileViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.bounds.height * 0.5
+        return 330
     }
     
     /*

@@ -42,13 +42,15 @@ class AppointmentsView: UIView, InfoView {
         
         self.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = false
-        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = false
-        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = false
-        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = false
+        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.backgroundColor = UIColor.wallGreen
     }
     
     func formatSelf() {
-        self.backgroundColor = UIColor.wallGreen
     }
 }
+
+

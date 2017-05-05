@@ -22,6 +22,8 @@
 		886360E11EBA7C000011A7C9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360E01EBA7C000011A7C9 /* Profile.swift */; };
 		886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */; };
 		886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886360E51EBAC7C30011A7C9 /* AppointmentsView.xib */; };
+		886360EA1EBB7F860011A7C9 /* BlogPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886360E91EBB7F860011A7C9 /* BlogPostsView.xib */; };
+		886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886360EB1EBBBB480011A7C9 /* ApplicationsView.xib */; };
 		8882FEAE1EB548F2001B210A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAD1EB548F2001B210A /* Event.swift */; };
 		8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEAF1EB54A42001B210A /* FollowUp.swift */; };
 		8882FEB21EB550A1001B210A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB11EB550A1001B210A /* Contact.swift */; };
@@ -71,6 +73,8 @@
 		886360E01EBA7C000011A7C9 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		886360E51EBAC7C30011A7C9 /* AppointmentsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentsView.xib; sourceTree = "<group>"; };
+		886360E91EBB7F860011A7C9 /* BlogPostsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostsView.xib; sourceTree = "<group>"; };
+		886360EB1EBBBB480011A7C9 /* ApplicationsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsView.xib; sourceTree = "<group>"; };
 		8882FEAD1EB548F2001B210A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8882FEAF1EB54A42001B210A /* FollowUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUp.swift; sourceTree = "<group>"; };
 		8882FEB11EB550A1001B210A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -120,8 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				88C6CA401EB5109B00DFCF8C /* Main.storyboard */,
-				886360E51EBAC7C30011A7C9 /* AppointmentsView.xib */,
 				88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */,
+				886360E91EBB7F860011A7C9 /* BlogPostsView.xib */,
+				886360EB1EBBBB480011A7C9 /* ApplicationsView.xib */,
+				886360E51EBAC7C30011A7C9 /* AppointmentsView.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -311,8 +317,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886360EA1EBB7F860011A7C9 /* BlogPostsView.xib in Resources */,
 				88C6CA4A1EB5109B00DFCF8C /* LaunchScreen.storyboard in Resources */,
 				88C6CA471EB5109B00DFCF8C /* Assets.xcassets in Resources */,
+				886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */,
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
 				88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */,
 			);
