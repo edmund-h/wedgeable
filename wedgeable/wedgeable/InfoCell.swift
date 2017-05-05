@@ -13,8 +13,14 @@ class InfoCell: UITableViewCell {
     
     var aspect: Aspect? = nil {
         didSet {
-            let view = self.aspect?.getAspectView()
-            view?.addAndConstrainTo(view: self.contentView)
+            if let view = self.aspect?.getAspectView() as? UIView{
+                view.addAndConstrainTo(view: self.contentView)
+            }
+            if aspect ==  nil {
+                    self.contentView.subviews.forEach({
+                        $0.removeFromSuperview()
+                    })
+            }
         }
     }
     
@@ -39,13 +45,5 @@ protocol InfoView {
 }
 
 extension InfoView {
-    func addAndConstrainTo(view: UIView) {
-        let me = self as! UIView
-        view.addSubview(me)
-        me.translatesAutoresizingMaskIntoConstraints = false
-        me.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        me.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        me.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        me.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-    }
+    
 }

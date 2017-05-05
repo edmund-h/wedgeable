@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
 		886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */; };
@@ -31,7 +32,6 @@
 		8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB61EB571DA001B210A /* BlogPost.swift */; };
 		8882FEB91EB57A8A001B210A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEB81EB57A8A001B210A /* Project.swift */; };
 		8882FEBD1EB5982B001B210A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEBC1EB5982B001B210A /* Application.swift */; };
-		88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DCF1EB5112700D7EAE2 /* colors.swift */; };
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
@@ -58,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		8882FEB61EB571DA001B210A /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		8882FEB81EB57A8A001B210A /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		8882FEBC1EB5982B001B210A /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		88BC8DCF1EB5112700D7EAE2 /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 		8882FEB31EB56854001B210A /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				881FC86C1EBD3AE100477924 /* Extensions.swift */,
 				88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */,
-				88BC8DCF1EB5112700D7EAE2 /* colors.swift */,
 				88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */,
 				88C6CA4B1EB5109B00DFCF8C /* Info.plist */,
 				88FBC53F1EB66C74003106E5 /* Date.swift */,
@@ -345,7 +345,6 @@
 				8882FEBD1EB5982B001B210A /* Application.swift in Sources */,
 				886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */,
 				886360BB1EB789580011A7C9 /* Contactable.swift in Sources */,
-				88BC8DD01EB5112700D7EAE2 /* colors.swift in Sources */,
 				8882FEAE1EB548F2001B210A /* Event.swift in Sources */,
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				8882FEB51EB56941001B210A /* Appointment.swift in Sources */,
@@ -360,6 +359,7 @@
 				886360DD1EBA695D0011A7C9 /* EventViewController.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
 				8882FEB21EB550A1001B210A /* Contact.swift in Sources */,
+				881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */,
 				886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */,
 				886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */,
 				886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */,

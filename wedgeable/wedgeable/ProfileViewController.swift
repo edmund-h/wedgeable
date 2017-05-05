@@ -39,6 +39,13 @@ class ProfileViewController: UITableViewController {
         return 330
     }
     
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? InfoCell {
+            print("set \(indexPath.row) aspect to nil")
+            cell.aspect = nil
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

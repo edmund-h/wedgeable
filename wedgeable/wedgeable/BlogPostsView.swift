@@ -21,11 +21,30 @@ class BlogPostsView: UIView, InfoView {
     }
     */
     
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var numPostsLabel: UILabel!
+    @IBOutlet weak var numDraftsLabel: UILabel!
+    @IBOutlet weak var nextPostLabel: UILabel!
+    @IBOutlet weak var breakdownView: UIView!
+    @IBOutlet weak var breakdownLabel: UILabel!
+    @IBOutlet weak var missingLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
     func commonInit() {
-        
+        Bundle.main.loadNibNamed("BlogPostsView", owner: self, options: nil)
+        contentView.addAndConstrainTo(view: self)
+        contentView.backgroundColor = UIColor.slashBlue
     }
     
     func formatSelf() {
-        self.backgroundColor = UIColor.yellow
     }
 }
