@@ -42,6 +42,7 @@
 		88B230AD1EBF886700F6043F /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */; };
 		88B230B31EBF8F6200F6043F /* ProjectOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B11EBF8F6200F6043F /* ProjectOverView.swift */; };
 		88B230B51EBF8FF600F6043F /* OverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B41EBF8FF600F6043F /* OverViewCell.swift */; };
+		88B230B71EBFA2A000F6043F /* ProjectOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B230B61EBFA2A000F6043F /* ProjectOverView.xib */; };
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
@@ -103,6 +104,7 @@
 		88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
 		88B230B11EBF8F6200F6043F /* ProjectOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectOverView.swift; sourceTree = "<group>"; };
 		88B230B41EBF8FF600F6043F /* OverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewCell.swift; sourceTree = "<group>"; };
+		88B230B61EBFA2A000F6043F /* ProjectOverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectOverView.xib; sourceTree = "<group>"; };
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				88B2309C1EBEE5E700F6043F /* ProjectsView.xib */,
 				88B2309E1EBEF3EC00F6043F /* ContactsView.xib */,
 				88B230A01EBF034F00F6043F /* FollowUpsView.xib */,
+				88B230B61EBFA2A000F6043F /* ProjectOverView.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				88B2309F1EBEF3EC00F6043F /* ContactsView.xib in Resources */,
 				88C6CA471EB5109B00DFCF8C /* Assets.xcassets in Resources */,
 				88B230A11EBF034F00F6043F /* FollowUpsView.xib in Resources */,
+				88B230B71EBFA2A000F6043F /* ProjectOverView.xib in Resources */,
 				886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */,
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
 				88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */,

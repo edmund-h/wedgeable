@@ -26,10 +26,11 @@ class Project: Event{
     weak var timeline: Timeline?
     var contributors: [String]
     var technologies: [String]
+    var images: [String] = []
     var goal: TimelineEntry?//note that Project checks needsFollowUp differently. see mark for mor information
     
     init (title: String, dateStarted: Date) {
-        let milestone = ProjectMilestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).")
+        let milestone = ProjectMilestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).", attained: true)
         self.timeline = Timeline(scope: .projects)
         timeline?.append([milestone])
         contributors = []
@@ -47,9 +48,9 @@ class Project: Event{
         if let timeline = timeline{timeline.append([newCommits])}
     }
     
-    func addMilestone(of status: Status,date: Date, description: String?) {
+    func addMilestone(of status: Status, date: Date, description: String?) {
         let desc = "\(status.rawValue) on \(date)"
-        var newMilestone = ProjectMilestone(status: status, date: date, description: desc)
+        var newMilestone = ProjectMilestone(status: status, date: date, description: desc, attained: true)
         if let description = description {
             newMilestone.description = description
         }
@@ -57,14 +58,32 @@ class Project: Event{
         if let timeline = timeline{timeline.append([newMilestone])}
     }
     
-    func addContributors(named names: String) {
+    enum Action { case add, remove }
+    
+    func changeContributors(named names: String) {
         let nameList = names.components(separatedBy: ", ")
-        self.contributors.append(contentsOf: nameList)
+        self.contributors = nameList
     }
     
-    func addTechnologies(named names: String) {
+    func changeTechnologies(named names: String) {
         let nameList = names.components(separatedBy: ", ")
-        self.technologies.append(contentsOf: nameList)
+        self.technologies = nameList
+    }
+    
+    func image(to action: Project.Action, _ name: String)-> Bool {
+        if action == .add {
+            guard images.count < 4 else {return false}
+            if images.contains(name) {
+                images.append(name)
+                return true
+            } else { return false}
+        }
+        else {
+            if let toRemove = images.index(where: {$0 == name}) {
+                images.remove(at: toRemove)
+                return true
+            } else { return false}
+        }
     }
     
     func setNextGoal(ofType: Status, forDate date: Date)-> Bool {
@@ -72,7 +91,7 @@ class Project: Event{
             self.goal = Commits(date: date, number: 1, description: "Put in some work on \(title)")
             return true
         } else {
-            self.goal = ProjectMilestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)")
+            self.goal = ProjectMilestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)", attained: false)
             return true
         }
     }

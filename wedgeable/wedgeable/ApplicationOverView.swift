@@ -10,7 +10,6 @@ import UIKit
 
 class ApplicationOverView: UIView {
     
-    
     weak var application: Application!
     
     override init(frame: CGRect) {
@@ -26,4 +25,8 @@ class ApplicationOverView: UIView {
     func commonInit() {
         
     }
+    
+    
+    
+    
 }

@@ -42,12 +42,14 @@ struct ApplyMilestone: TimelineEntry {
     var status: Application.Status
     var date: Date
     var description: String
+    var complete: Bool
 }
 
 struct ProjectMilestone: TimelineEntry {
     var status: Project.Status
     var date: Date
     var description: String
+    var attained: Bool
 }
 
 struct Commits: TimelineEntry {

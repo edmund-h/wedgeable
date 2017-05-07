@@ -37,7 +37,7 @@ class Application: Event, NeedsFollowUp, Contactable {
     func changeStatus(to status: Status, date: Date, description: String?) {
         var des = "\(status) on \(date)"
         if let description = description { des = description }
-        let milestone = ApplyMilestone(status: status, date: date, description: des)
+        let milestone = ApplyMilestone(status: status, date: date, description: des, complete: false)
         timeline?.append([milestone])
         self.followUp = FollowUp(forEvent: self)
     }
