@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectsView" customModule="wedgeable" customModuleProvider="target">
+            <connections>
+                <outlet property="activeLabel" destination="BOs-L2-bb1" id="bvG-C1-Kll"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="A24-bD-qz4"/>
+                <outlet property="nextGoalLabel" destination="Eya-NN-1Hf" id="Cu9-qn-d2w"/>
+                <outlet property="projByCommitsLabel" destination="eei-T2-e7V" id="Zfv-nU-suz"/>
+                <outlet property="projByCommitsView" destination="tGK-Pd-fyd" id="Xjx-v7-xwS"/>
+                <outlet property="projByStageLabel" destination="Q9g-8S-Ybx" id="V77-kC-AhY"/>
+                <outlet property="projByStageView" destination="pL4-em-ROs" id="sfr-De-7S2"/>
+                <outlet property="totalLabel" destination="SHh-lT-sE6" id="zFr-dl-a3m"/>
+                <outlet property="weeklyCommitsLabel" destination="vfU-H2-9wg" id="RLG-H4-GxQ"/>
+                <outlet property="weeklyCommitsView" destination="cji-sb-cW6" id="xwx-Iv-DZQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-LP-HlT">
+                    <rect key="frame" x="156" y="20" width="62.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pL4-em-ROs">
+                    <rect key="frame" x="37" y="97.5" width="300" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project breakdown by commits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eei-T2-e7V">
+                    <rect key="frame" x="100.5" y="191.5" width="174.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active: ##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOs-L2-bb1">
+                    <rect key="frame" x="72" y="55.5" width="65.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-Pd-fyd">
+                    <rect key="frame" x="37.5" y="162.5" width="300" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: ##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHh-lT-sE6">
+                    <rect key="frame" x="237.5" y="55.5" width="57" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cji-sb-cW6">
+                    <rect key="frame" x="38" y="227.5" width="300" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commits this week/needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-H2-9wg">
+                    <rect key="frame" x="112" y="256.5" width="153.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Goal: Project - Milestone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eya-NN-1Hf">
+                    <rect key="frame" x="91" y="298" width="193.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project breakdown by stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-8S-Ybx">
+                    <rect key="frame" x="108" y="126.5" width="157.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.45339542490000001" green="0.73232715960000005" blue="0.94495897129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vfU-H2-9wg" firstAttribute="top" secondItem="cji-sb-cW6" secondAttribute="bottom" constant="4" id="3bk-r6-wYb"/>
+                <constraint firstItem="Eya-NN-1Hf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5q0-M7-B3M"/>
+                <constraint firstItem="tGK-Pd-fyd" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.075" id="66O-i0-yGA"/>
+                <constraint firstAttribute="centerX" secondItem="BOs-L2-bb1" secondAttribute="trailing" constant="50" id="BGA-VN-bf7"/>
+                <constraint firstItem="U7c-LP-HlT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D46-bm-7qZ"/>
+                <constraint firstItem="tGK-Pd-fyd" firstAttribute="top" secondItem="pL4-em-ROs" secondAttribute="bottom" constant="40" id="EcV-cA-1GQ"/>
+                <constraint firstItem="cji-sb-cW6" firstAttribute="width" secondItem="tGK-Pd-fyd" secondAttribute="width" id="IkG-dR-Q8X"/>
+                <constraint firstItem="tGK-Pd-fyd" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="Lgh-7a-IZ4"/>
+                <constraint firstItem="pL4-em-ROs" firstAttribute="top" secondItem="BOs-L2-bb1" secondAttribute="bottom" constant="25" id="Onc-yu-ug7"/>
+                <constraint firstItem="pL4-em-ROs" firstAttribute="top" secondItem="SHh-lT-sE6" secondAttribute="bottom" constant="25" id="QYk-QO-NoA"/>
+                <constraint firstItem="Q9g-8S-Ybx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qyt-Zf-7fN"/>
+                <constraint firstItem="cji-sb-cW6" firstAttribute="height" secondItem="tGK-Pd-fyd" secondAttribute="height" id="RP7-Ri-aqD"/>
+                <constraint firstItem="eei-T2-e7V" firstAttribute="top" secondItem="tGK-Pd-fyd" secondAttribute="bottom" constant="4" id="Xqk-UL-cxf"/>
+                <constraint firstAttribute="bottom" secondItem="Eya-NN-1Hf" secondAttribute="bottom" constant="15" id="ZGa-cE-AIH"/>
+                <constraint firstItem="tGK-Pd-fyd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="aGQ-Y8-WkV"/>
+                <constraint firstItem="eei-T2-e7V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="afQ-dr-x8z"/>
+                <constraint firstItem="tGK-Pd-fyd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bE9-tT-63g"/>
+                <constraint firstItem="vfU-H2-9wg" firstAttribute="centerX" secondItem="cji-sb-cW6" secondAttribute="centerX" id="bPu-ds-TLP"/>
+                <constraint firstItem="pL4-em-ROs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cTe-cw-8Q9"/>
+                <constraint firstItem="U7c-LP-HlT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="eBN-2n-OQK"/>
+                <constraint firstItem="pL4-em-ROs" firstAttribute="width" secondItem="tGK-Pd-fyd" secondAttribute="width" id="hlf-z0-g77"/>
+                <constraint firstItem="Q9g-8S-Ybx" firstAttribute="top" secondItem="pL4-em-ROs" secondAttribute="bottom" constant="4" id="jPo-Tf-kFq"/>
+                <constraint firstItem="pL4-em-ROs" firstAttribute="height" secondItem="tGK-Pd-fyd" secondAttribute="height" id="jg9-1f-71C"/>
+                <constraint firstItem="cji-sb-cW6" firstAttribute="centerX" secondItem="tGK-Pd-fyd" secondAttribute="centerX" id="m5m-FA-fwQ"/>
+                <constraint firstItem="cji-sb-cW6" firstAttribute="top" secondItem="tGK-Pd-fyd" secondAttribute="bottom" constant="40" id="rZj-Kx-I6s"/>
+                <constraint firstAttribute="centerX" secondItem="SHh-lT-sE6" secondAttribute="leading" constant="-50" id="z6F-JO-2v9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.5" y="-130"/>
+        </view>
+    </objects>
+</document>

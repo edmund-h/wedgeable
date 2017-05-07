@@ -21,12 +21,32 @@ class ProjectsView: UIView, InfoView {
     }
     */
     
+    @IBOutlet weak var contentView: UIView!
     
-    func commonInit() {
-        
+    @IBOutlet weak var projByStageView: UIView!
+    @IBOutlet weak var projByCommitsView: UIView!
+    @IBOutlet weak var weeklyCommitsView: UIView!
+    @IBOutlet weak var projByStageLabel: UILabel!
+    @IBOutlet weak var projByCommitsLabel: UILabel!
+    @IBOutlet weak var weeklyCommitsLabel: UILabel!
+    @IBOutlet weak var activeLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var nextGoalLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
     
-    func formatSelf() {
-        self.backgroundColor = UIColor.green
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        Bundle.main.loadNibNamed("ProjectsView", owner: self, options: nil)
+        
+        contentView.addAndConstrainTo(view: self)
+        contentView.backgroundColor = UIColor.wallGreen
     }
 }

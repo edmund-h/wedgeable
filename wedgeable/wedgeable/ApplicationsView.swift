@@ -38,12 +38,7 @@ class ApplicationsView: UIView, InfoView {
     func commonInit() {
         Bundle.main.loadNibNamed("ApplicationsView", owner: self, options: nil)
         
-        self.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        contentView.addAndConstrainTo(view: self)
         self.backgroundColor = UIColor.slashBlue
     }
 }
