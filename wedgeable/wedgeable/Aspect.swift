@@ -32,4 +32,58 @@ enum Aspect {
         }
     }
     
+    func getTestData()-> [Event]{
+        let all = [
+            Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+            Event(name: "loll", date: Date(timeIntervalSinceNow: 0), aspect: .blogposts ),
+            Event(name: "lolll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+            Event(name: "llol", date: Date(timeIntervalSinceNow: 0), aspect: .applications),
+            Event(name: "lllol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
+            Event(name: "lloll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+            Event(name: "lllolll", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
+            Event(name: "loool", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+            Event(name: "lolol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+            Project(title: "Wedgeable", dateStarted: Date(timeIntervalSinceNow: -750000.0)),
+            Project(title: "HereThere.Be", dateStarted: Date(timeIntervalSinceNow: -10000000.0)),
+            Contact(name: "Mom", metAt: "Born", info: "9178547765", fromEvent: nil),
+            Contact(name: "Ali", metAt: "Party", info: "4254662904", fromEvent: nil),
+            Appointment(name: "Hacker Meetup", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .meetup),
+            Appointment(name: "date with hot girl", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .informalMeeting)
+            
+        ]
+        switch self {
+        case .profile:
+            return [Event]()
+        case .contacts:
+            let result = all.flatMap({ (element) -> Contact? in
+               return element as? Contact
+            })
+            return result
+        case .applications:
+            let result = all.flatMap({ (element) -> Application? in
+                return element as? Application
+            })
+            return result
+        case .followups:
+            let result = all.flatMap({ (element) -> FollowUp? in
+                return element as? FollowUp
+            })
+            return result
+        case.appointments:
+            let result = all.flatMap({ (element) -> Appointment? in
+                return element as? Appointment
+            })
+            return result
+        case .blogposts:
+            let result = all.flatMap({ (element) -> BlogPost? in
+                return element as? BlogPost
+            })
+            return result
+        case .projects:
+            let result = all.flatMap({ (element) -> Project? in
+                return element as? Project
+            })
+            return result
+        }
+    }
 }

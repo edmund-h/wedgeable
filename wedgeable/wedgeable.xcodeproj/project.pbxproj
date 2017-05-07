@@ -43,6 +43,7 @@
 		88B230B31EBF8F6200F6043F /* ProjectOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B11EBF8F6200F6043F /* ProjectOverView.swift */; };
 		88B230B51EBF8FF600F6043F /* OverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B41EBF8FF600F6043F /* OverViewCell.swift */; };
 		88B230B71EBFA2A000F6043F /* ProjectOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B230B61EBFA2A000F6043F /* ProjectOverView.xib */; };
+		88B230B91EBFC1F100F6043F /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B81EBFC1F100F6043F /* TimelineViewController.swift */; };
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
@@ -105,6 +106,7 @@
 		88B230B11EBF8F6200F6043F /* ProjectOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectOverView.swift; sourceTree = "<group>"; };
 		88B230B41EBF8FF600F6043F /* OverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewCell.swift; sourceTree = "<group>"; };
 		88B230B61EBFA2A000F6043F /* ProjectOverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectOverView.xib; sourceTree = "<group>"; };
+		88B230B81EBFC1F100F6043F /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */,
 				886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */,
+				88B230B81EBFC1F100F6043F /* TimelineViewController.swift */,
 				886360DC1EBA695D0011A7C9 /* EventViewController.swift */,
 				886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */,
 				886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */,
@@ -412,6 +415,7 @@
 				88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */,
 				88B230A71EBF874000F6043F /* PostWebView.swift in Sources */,
 				886360D91EB7C42A0011A7C9 /* TimelineCell.swift in Sources */,
+				88B230B91EBFC1F100F6043F /* TimelineViewController.swift in Sources */,
 				88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */,
 				88B230A31EBF868100F6043F /* ApplicationOverView.swift in Sources */,
 				886360CD1EB79C240011A7C9 /* ApplicationsView.swift in Sources */,

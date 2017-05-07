@@ -60,12 +60,12 @@ class Project: Event{
     
     enum Action { case add, remove }
     
-    func changeContributors(named names: String) {
+    func changeContributors(_ names: String) {
         let nameList = names.components(separatedBy: ", ")
         self.contributors = nameList
     }
     
-    func changeTechnologies(named names: String) {
+    func changeTechnologies(_ names: String) {
         let nameList = names.components(separatedBy: ", ")
         self.technologies = nameList
     }
@@ -86,13 +86,11 @@ class Project: Event{
         }
     }
     
-    func setNextGoal(ofType: Status, forDate date: Date)-> Bool {
+    func setNextGoal(ofType: Status, forDate date: Date) {
         if ofType == Status.commits {
             self.goal = Commits(date: date, number: 1, description: "Put in some work on \(title)")
-            return true
         } else {
             self.goal = ProjectMilestone(status: ofType, date: date, description: "Try to get to \(ofType.rawValue) by \(date)", attained: false)
-            return true
         }
     }
     

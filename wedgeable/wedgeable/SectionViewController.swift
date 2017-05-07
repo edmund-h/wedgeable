@@ -14,22 +14,13 @@ class SectionViewController: UITableViewController {
     //a button in the upper right corner will allow the user to add a new task/event. on the profile view, this will be the button to edit your profile
     
     var aspect: Aspect!
-    var events: [Event] = [
-        Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "loll", date: Date(timeIntervalSinceNow: 0), aspect: .blogposts ),
-        Event(name: "lolll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "llol", date: Date(timeIntervalSinceNow: 0), aspect: .applications),
-        Event(name: "lllol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-        Event(name: "lloll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lllolll", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-        Event(name: "loool", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-        Event(name: "lolol", date: Date(timeIntervalSinceNow: 0), aspect: .followups)
-    ]
+    var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.events = aspect.getTestData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,18 +65,20 @@ class SectionViewController: UITableViewController {
         return true
     }
 
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
-    }
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "TimelineSegue" {
+            let destination = segue.destination as! TimelineViewController
+            let sender = sender as! ListCell
+            let thing = event as! 
+            destination.event = sender.event
+            
+        }
     }
-    */
+    
 
 }

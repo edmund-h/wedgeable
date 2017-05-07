@@ -372,7 +372,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pQu-Zo-asc" kind="show" id="5xw-9B-oju"/>
+                                    <segue destination="pQu-Zo-asc" kind="show" identifier="TimelineSegue" id="5xw-9B-oju"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -409,13 +409,13 @@
         <!--Timeline View Controller-->
         <scene sceneID="kvn-Rc-abo">
             <objects>
-                <tableViewController title="Timeline View Controller" id="pQu-Zo-asc" sceneMemberID="viewController">
+                <tableViewController title="Timeline View Controller" id="pQu-Zo-asc" customClass="TimelineViewController" customModule="wedgeable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zzR-eb-UI6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xqH-1a-jOs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="overviewCell" id="xqH-1a-jOs">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xqH-1a-jOs" id="BVL-gf-PLK">
@@ -423,7 +423,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tpq-cK-ld9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCell" id="tpq-cK-ld9">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpq-cK-ld9" id="ulk-0n-lel">
@@ -466,7 +466,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eif-rm-ns7"/>
-        <segue reference="Fxd-jb-HYY"/>
+        <segue reference="5xw-9B-oju"/>
         <segue reference="zx6-qZ-f7G"/>
     </inferredMetricsTieBreakers>
 </document>

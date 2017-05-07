@@ -1,20 +1,31 @@
 //
-//  TableViewController.swift
+//  TimelineViewController.swift
 //  wedgeable
 //
-//  Created by Edmund Holderbaum on 5/3/17.
+//  Created by Edmund Holderbaum on 5/7/17.
 //  Copyright © 2017 Bozo Design Labs. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UITableViewController {
+class TimelineViewController: UITableViewController {
 
+    weak var event: Event!
+    weak var timeline: Timeline!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
+        if let project = event as? Project {
+            project.addCommits(date: Date(timeIntervalSinceNow: -749000.0), number: 1, description: "initial commit lol")
+            project.addCommits(date: Date(timeIntervalSinceNow: -250000.0)  , number: 3, description: "made some commits yo")
+            project.addCommits(date: Date(timeIntervalSinceNow: -500000.0), number: 3, description: "commits happened here")
+            project.addCommits(date: Date(timeIntervalSinceNow: -10000.0), number: 3, description: "commits occurred")
+            project.setNextGoal(ofType: .published, forDate: Date(timeIntervalSinceNow: 250000.0))
+            project.changeTechnologies("Swift, CoreData, Google Sheets API, maybe gitHub")
+            project.changeContributors("solo project")
+            timeline = project.timeline
+        }
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
@@ -27,25 +38,32 @@ class EventViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return getEntries().count + 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "overviewCell", for: indexPath) as! OverViewCell
+            if let project = event as? Project {
+                cell.overviewProject(project)
+            } else if let appl = event as? Application {
+                cell.overviewApplication(appl)
+            }
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell", for: indexPath) as! TimelineCell
+        cell.textLabel?.text = getEntries()[indexPath.row].description
         return cell
     }
-    */
-
+    
+    func getEntries()->[TimelineEntry]{
+        return timeline.collection.values.flatMap({ $0.map({ $0 }) })
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
