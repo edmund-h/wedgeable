@@ -45,8 +45,10 @@ class ProjectsView: UIView, InfoView {
     
     func commonInit() {
         Bundle.main.loadNibNamed("ProjectsView", owner: self, options: nil)
-        
         contentView.addAndConstrainTo(view: self)
         contentView.backgroundColor = UIColor.wallGreen
+        [projByStageView, projByCommitsView, weeklyCommitsView].forEach({
+            $0.layer.cornerRadius = 8
+        })
     }
 }

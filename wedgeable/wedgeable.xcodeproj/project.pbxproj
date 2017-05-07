@@ -35,6 +35,13 @@
 		88B2309D1EBEE5E700F6043F /* ProjectsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B2309C1EBEE5E700F6043F /* ProjectsView.xib */; };
 		88B2309F1EBEF3EC00F6043F /* ContactsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B2309E1EBEF3EC00F6043F /* ContactsView.xib */; };
 		88B230A11EBF034F00F6043F /* FollowUpsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B230A01EBF034F00F6043F /* FollowUpsView.xib */; };
+		88B230A31EBF868100F6043F /* ApplicationOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230A21EBF868100F6043F /* ApplicationOverView.swift */; };
+		88B230A71EBF874000F6043F /* PostWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230A61EBF874000F6043F /* PostWebView.swift */; };
+		88B230A91EBF87D100F6043F /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230A81EBF87D100F6043F /* ContactDetailView.swift */; };
+		88B230AB1EBF87EC00F6043F /* FollowUpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230AA1EBF87EC00F6043F /* FollowUpDetailView.swift */; };
+		88B230AD1EBF886700F6043F /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */; };
+		88B230B31EBF8F6200F6043F /* ProjectOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B11EBF8F6200F6043F /* ProjectOverView.swift */; };
+		88B230B51EBF8FF600F6043F /* OverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B230B41EBF8FF600F6043F /* OverViewCell.swift */; };
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
@@ -89,6 +96,13 @@
 		88B2309C1EBEE5E700F6043F /* ProjectsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsView.xib; sourceTree = "<group>"; };
 		88B2309E1EBEF3EC00F6043F /* ContactsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView.xib; sourceTree = "<group>"; };
 		88B230A01EBF034F00F6043F /* FollowUpsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowUpsView.xib; sourceTree = "<group>"; };
+		88B230A21EBF868100F6043F /* ApplicationOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationOverView.swift; sourceTree = "<group>"; };
+		88B230A61EBF874000F6043F /* PostWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostWebView.swift; sourceTree = "<group>"; };
+		88B230A81EBF87D100F6043F /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		88B230AA1EBF87EC00F6043F /* FollowUpDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUpDetailView.swift; sourceTree = "<group>"; };
+		88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
+		88B230B11EBF8F6200F6043F /* ProjectOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectOverView.swift; sourceTree = "<group>"; };
+		88B230B41EBF8FF600F6043F /* OverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewCell.swift; sourceTree = "<group>"; };
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -164,6 +178,7 @@
 			children = (
 				88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */,
 				88BC8DD91EB5412900D7EAE2 /* ListCell.swift */,
+				88B230B41EBF8FF600F6043F /* OverViewCell.swift */,
 				886360D81EB7C42A0011A7C9 /* TimelineCell.swift */,
 				886360C21EB79B2F0011A7C9 /* ContactsView.swift */,
 				886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */,
@@ -172,6 +187,12 @@
 				886360CA1EB79C160011A7C9 /* AppointmentsView.swift */,
 				886360CC1EB79C240011A7C9 /* ApplicationsView.swift */,
 				886360D41EB7AB600011A7C9 /* ProfileView.swift */,
+				88B230A21EBF868100F6043F /* ApplicationOverView.swift */,
+				88B230B11EBF8F6200F6043F /* ProjectOverView.swift */,
+				88B230A61EBF874000F6043F /* PostWebView.swift */,
+				88B230A81EBF87D100F6043F /* ContactDetailView.swift */,
+				88B230AA1EBF87EC00F6043F /* FollowUpDetailView.swift */,
+				88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -223,8 +244,8 @@
 			children = (
 				886360E41EBAC5BE0011A7C9 /* Nibs & Storyboards */,
 				8882FEB31EB56854001B210A /* Essentials */,
-				8882FEAA1EB547FD001B210A /* Models */,
 				8882FEAB1EB54812001B210A /* Views */,
+				8882FEAA1EB547FD001B210A /* Models */,
 				8882FEAC1EB54822001B210A /* Controllers */,
 				88C6CA431EB5109B00DFCF8C /* wedgeable.xcdatamodeld */,
 				88C6CA461EB5109B00DFCF8C /* Assets.xcassets */,
@@ -361,6 +382,7 @@
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				8882FEB51EB56941001B210A /* Appointment.swift in Sources */,
 				88FBC5401EB66C74003106E5 /* Date.swift in Sources */,
+				88B230A91EBF87D100F6043F /* ContactDetailView.swift in Sources */,
 				8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */,
 				8882FEB91EB57A8A001B210A /* Project.swift in Sources */,
 				886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */,
@@ -371,17 +393,23 @@
 				886360DD1EBA695D0011A7C9 /* EventViewController.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,
 				8882FEB21EB550A1001B210A /* Contact.swift in Sources */,
+				88B230AD1EBF886700F6043F /* AppointmentDetailView.swift in Sources */,
 				881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */,
+				88B230B51EBF8FF600F6043F /* OverViewCell.swift in Sources */,
 				886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */,
 				886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */,
 				886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */,
 				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
+				88B230AB1EBF87EC00F6043F /* FollowUpDetailView.swift in Sources */,
 				8882FEB01EB54A42001B210A /* FollowUp.swift in Sources */,
 				886360C71EB79BA80011A7C9 /* ProjectsView.swift in Sources */,
+				88B230B31EBF8F6200F6043F /* ProjectOverView.swift in Sources */,
 				886360CB1EB79C160011A7C9 /* AppointmentsView.swift in Sources */,
 				88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */,
+				88B230A71EBF874000F6043F /* PostWebView.swift in Sources */,
 				886360D91EB7C42A0011A7C9 /* TimelineCell.swift in Sources */,
 				88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */,
+				88B230A31EBF868100F6043F /* ApplicationOverView.swift in Sources */,
 				886360CD1EB79C240011A7C9 /* ApplicationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

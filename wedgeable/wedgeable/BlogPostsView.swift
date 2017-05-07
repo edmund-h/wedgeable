@@ -43,6 +43,7 @@ class BlogPostsView: UIView, InfoView {
         Bundle.main.loadNibNamed("BlogPostsView", owner: self, options: nil)
         contentView.addAndConstrainTo(view: self)
         contentView.backgroundColor = UIColor.slashBlue
+        breakdownView.layer.cornerRadius = 8
     }
     
     func formatSelf() {

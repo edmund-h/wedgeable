@@ -40,5 +40,8 @@ class ApplicationsView: UIView, InfoView {
         
         contentView.addAndConstrainTo(view: self)
         self.backgroundColor = UIColor.slashBlue
+        
+        applBreakdownView.layer.cornerRadius = 8
+        interviewBreakdown.layer.cornerRadius = 8
     }
 }

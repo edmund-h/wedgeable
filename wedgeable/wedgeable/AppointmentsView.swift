@@ -18,9 +18,9 @@ class AppointmentsView: UIView, InfoView {
     
     @IBOutlet weak var contentView: UIView!
     
-    @IBOutlet weak var complSchedWeekContainer: UIView!
-    @IBOutlet weak var complSchedAllContainer: UIView!
-    @IBOutlet weak var typeBreakdownContainer: UIView!
+    @IBOutlet weak var complSchedWeekView: UIView!
+    @IBOutlet weak var complSchedAllView: UIView!
+    @IBOutlet weak var typeBreakdownView: UIView!
     
     @IBOutlet weak var complSchedWeekLabel: UILabel!
     @IBOutlet weak var complSchedAllLabel: UILabel!
@@ -35,6 +35,9 @@ class AppointmentsView: UIView, InfoView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+        [complSchedAllView, complSchedWeekView, complSchedAllLabel].forEach({
+            $0.layer.cornerRadius = 8
+        })
     }
     
     func commonInit() {

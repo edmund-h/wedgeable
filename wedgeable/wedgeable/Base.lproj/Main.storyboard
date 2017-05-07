@@ -388,10 +388,10 @@
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="hdf-5p-yr5">
             <objects>
-                <viewController storyboardIdentifier="Detail View Controller" id="aH3-z5-4w3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail View Controller" title="Detail View Controller" id="aH3-z5-4w3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NrR-Df-Q1a"/>
                         <viewControllerLayoutGuide type="bottom" id="ZsR-ZS-ksC"/>
@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="964" y="882"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Timeline View Controller-->
         <scene sceneID="kvn-Rc-abo">
             <objects>
-                <tableViewController id="pQu-Zo-asc" sceneMemberID="viewController">
+                <tableViewController title="Timeline View Controller" id="pQu-Zo-asc" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zzR-eb-UI6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,7 +450,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RB8-Kf-OcY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UUM-vy-eZn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUM-vy-eZn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -465,8 +465,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zx6-qZ-f7G"/>
+        <segue reference="eif-rm-ns7"/>
         <segue reference="Fxd-jb-HYY"/>
-        <segue reference="iLG-5M-A8P"/>
+        <segue reference="zx6-qZ-f7G"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -42,6 +42,8 @@ class FollowUpsView: UIView, InfoView {
         Bundle.main.loadNibNamed("FollowUpsView", owner: self, options: nil)
         contentView.addAndConstrainTo(view: self)
         contentView.backgroundColor = UIColor.slashBlue
+        ontimeRatioView.layer.cornerRadius = 8
+        neededByTypeView.layer.cornerRadius = 8
     }
     
     func formatSelf() {
