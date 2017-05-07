@@ -9,26 +9,38 @@
 import UIKit
 
 class ContactsView: UIView, InfoView {
-
-    /*
-     
-    This will be a large view covering most of the screen that displays info about the contact such as where that person was met, what they do, where they work, and how many times contacted. 
-     
-     
-     
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var newContactBtn: UIButton!
+    
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var mostValuableLabel: UILabel!
+    @IBOutlet weak var needsFollowUpLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
     
     func commonInit() {
-        
+        Bundle.main.loadNibNamed("ContactsView", owner: self, options: nil)
+        contentView.addAndConstrainTo(view: self)
+        contentView.backgroundColor = UIColor.slashBlue
+        newContactBtn.layer.cornerRadius = 18
     }
     
     func formatSelf() {
         self.backgroundColor = UIColor.cyan
+    }
+    
+    @IBAction func newContact(_ sender: UIButton) {
+        //this will go to a special quick-add sequence that uses a uialert to add a new contact name and info, followed by another to add the place met
     }
 
 }

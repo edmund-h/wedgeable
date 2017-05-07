@@ -11,7 +11,7 @@ import Foundation
 enum Aspect {
     case profile, contacts, applications, followups, appointments, blogposts, projects
     
-    static let all = [Aspect.profile, Aspect.contacts, Aspect.applications, Aspect.followups, Aspect.appointments, Aspect.blogposts, Aspect.projects]
+    static let all = [Aspect.profile, Aspect.applications, Aspect.followups, Aspect.appointments, Aspect.blogposts, Aspect.projects, Aspect.contacts]
     
     func getAspectView()-> InfoView{
         switch self {

@@ -14,15 +14,34 @@ class FollowUpsView: UIView, InfoView {
      
      This will be a large view overviewing your record with followups: how many you have done, how quickly you follow up, how many you have sent late, etc
      
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
     */
     
+    @IBOutlet var contentView: UIView!
+    
+    @IBOutlet weak var dueTodayLabel: UILabel!
+    @IBOutlet weak var overdueLabel: UILabel!
+    @IBOutlet weak var leftWarningImg: UIImageView!
+    @IBOutlet weak var rightWarningImg: UIImageView!
+    @IBOutlet weak var neededByTypeView: UIView!
+    @IBOutlet weak var neededByTypeLabel: UILabel!
+    @IBOutlet weak var ontimeRatioView: UIView!
+    @IBOutlet weak var onTimeRatioLabel: UILabel!
+    @IBOutlet weak var avgTimeLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
     func commonInit() {
-        
+        Bundle.main.loadNibNamed("FollowUpsView", owner: self, options: nil)
+        contentView.addAndConstrainTo(view: self)
+        contentView.backgroundColor = UIColor.slashBlue
     }
     
     func formatSelf() {
