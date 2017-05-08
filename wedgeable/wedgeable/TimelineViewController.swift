@@ -12,6 +12,7 @@ class TimelineViewController: UITableViewController {
 
     weak var event: Event!
     weak var timeline: Timeline!
+    var infoCellHeight: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,8 @@ class TimelineViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return getEntries().count + 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return getEntries().count + 1
     }
 
     
@@ -57,13 +54,27 @@ class TimelineViewController: UITableViewController {
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell", for: indexPath) as! TimelineCell
-        cell.textLabel?.text = getEntries()[indexPath.row].description
+        cell.textLabel?.text = getEntries()[indexPath.row - 1].description
         return cell
     }
     
     func getEntries()->[TimelineEntry]{
-        return timeline.collection.values.flatMap({ $0.map({ $0 }) })
+        let entries = timeline.collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
+            return entries
+        })
+        return entries.sorted(by:{ (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
+            return entry1.date > entry2.date
+        })
+       
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return CGFloat( event.aspect.getXibHeight() )
+        }
+        return self.view.bounds.height * (1.0/12.0)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

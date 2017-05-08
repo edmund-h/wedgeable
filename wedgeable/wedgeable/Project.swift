@@ -23,19 +23,19 @@ class Project: Event{
     }
     var status: Status
     var link: URL?
-    weak var timeline: Timeline?
+    var timeline: Timeline!
     var contributors: [String]
     var technologies: [String]
     var images: [String] = []
     var goal: TimelineEntry?//note that Project checks needsFollowUp differently. see mark for mor information
     
     init (title: String, dateStarted: Date) {
-        let milestone = ProjectMilestone(status: .inProgress, date: dateStarted, description: "Started building \(title) on \(dateStarted).", attained: true)
+        let milestone = ProjectMilestone(status: .inProgress, date: dateStarted, description: "Started \(title) on \(dateStarted).", attained: true)
         self.timeline = Timeline(scope: .projects)
         timeline?.append([milestone])
         contributors = []
         technologies = []
-        self.status = .planning
+        self.status = .inProgress
         super.init(name: title, date: dateStarted, aspect: .projects)
     }
     

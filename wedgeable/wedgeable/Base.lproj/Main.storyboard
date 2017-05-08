@@ -124,26 +124,15 @@
                                 <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7rv-2o-wD0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FollowUpCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" textLabel="D0Q-7g-jbY" style="IBUITableViewCellStyleDefault" id="VwL-DV-jVY">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rv-2o-wD0" id="mZS-WC-MNI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="pQu-Zo-asc" kind="show" id="Fxd-jb-HYY"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FollowUpCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" textLabel="D0Q-7g-jbY" style="IBUITableViewCellStyleDefault" id="VwL-DV-jVY">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="followUpCell" tableViewCell="VwL-DV-jVY" id="CdM-Ii-w5O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D0Q-7g-jbY">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -152,7 +141,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="aH3-z5-4w3" kind="show" id="iLG-5M-A8P"/>
+                                            <segue destination="pQu-Zo-asc" kind="show" id="4MD-wc-UX2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -415,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="overviewCell" id="xqH-1a-jOs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="overviewCell" id="xqH-1a-jOs" customClass="OverViewCell" customModule="wedgeable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xqH-1a-jOs" id="BVL-gf-PLK">
@@ -423,7 +412,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCell" id="tpq-cK-ld9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCell" id="tpq-cK-ld9" customClass="TimelineCell" customModule="wedgeable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpq-cK-ld9" id="ulk-0n-lel">
@@ -465,7 +454,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eif-rm-ns7"/>
         <segue reference="5xw-9B-oju"/>
         <segue reference="zx6-qZ-f7G"/>
     </inferredMetricsTieBreakers>

@@ -13,7 +13,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
     var position: String?
     var company: String?
     var contactInfo: [FollowUp.Method : String] = [:]
-    
+    private var associatedEvents = [TimelineEntry]()
     weak var followUp: FollowUp?
     
     var dateMet: Date{
@@ -32,10 +32,20 @@ class Contact: Event, NeedsFollowUp, Contactable {
         self.placeMet = metAt
         super.init(name: name, date: now, aspect: .contacts)
         if fromEvent != nil {
-            let flwup = FollowUp(forEvent: self)
-            flwup.type = discernContactType(info: info)
-            self.followUp = flwup
+            let followup = FollowUp(forEvent: self)
+            followup.type = discernContactType(info: info)
+            self.followUp = followup
         }
+    }
+    
+    func getAssociatedEvents()->Timeline {
+        let timeline = Timeline(scope: .contacts)
+        timeline.append(associatedEvents)
+        return timeline
+    }
+    
+    func addAssociatedEvent(_ event: TimelineEntry){
+        self.associatedEvents.append(event)
     }
 }
 

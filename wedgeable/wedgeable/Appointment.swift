@@ -13,10 +13,12 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
     enum OfType: String {
         case meetup = "Meetup", interview = "Interview", informalMeeting = "Informal Meeting", coachMeeting = "Coach Meeting", other = ""
     }
-    
+    var address: String
     var completed: Bool = false
     var type: OfType
     var duration: Double
+    var userDescription: String?
+    weak var associatedApplication: Application?
     weak var associatedContact: Contact?
     weak var followUp: FollowUp?
     
@@ -30,18 +32,24 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
         return Date(timeInterval: timeInSeconds, since: startDate)
     }
     
-    var description: String {
-        var withContact = ""
-        if let contact = associatedContact {
-            withContact = " with \(contact.name)"
-        }
-        return "\(type.rawValue), \(name)," + withContact
-    }
     
-    init(name: String, starting: Date, duration: Double, type: OfType) {
+    var description: String {
+        if let desc = userDescription { return desc }
+        var details = ""
+        if let contact = associatedContact {
+            details += " with \(contact.name)"
+        }
+        if let appl = associatedApplication {
+            details += " of \(appl.company), for \(appl.position)"
+        }
+        return "\(name)\(details)"
+    }//NOTE: Use name for a short description. Use description for a detailed description.
+    
+    init(address: String, starting: Date, duration: Double, type: OfType) {
         self.type = type
         self.duration = duration
-        super.init(name: name, date: starting, aspect: .appointments)
+        self.address = address
+        super.init(name: "\(type.rawValue) at \(address)", date: starting, aspect: .appointments)
     }
     
     func setCompleted() {
@@ -49,8 +57,9 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
         self.followUp = FollowUp(forEvent: self)
     }
     
-    func setOtherType() {
-        
+    func setuserDescription(text: String) {
+        self.userDescription = text
+        self.name = text
     }
     
 }

@@ -70,14 +70,17 @@ class SectionViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let sender = sender as! ListCell
+        if sender.event == nil {return false}
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "TimelineSegue" {
-            let destination = segue.destination as! TimelineViewController
-            let sender = sender as! ListCell
-            let thing = event as! 
-            destination.event = sender.event
-            
-        }
+        let destination = segue.destination as! TimelineViewController
+        let sender = sender as! ListCell
+        
+        destination.event = sender.event
     }
     
 

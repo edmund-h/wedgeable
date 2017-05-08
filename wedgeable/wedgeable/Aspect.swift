@@ -32,6 +32,25 @@ enum Aspect {
         }
     }
     
+    func getXibHeight()-> Double{
+        switch self {
+        case .profile:
+            return 0
+        case .contacts:
+            return 0
+        case .applications:
+            return 0
+        case .followups:
+            return 0
+        case.appointments:
+            return 0
+        case .blogposts:
+            return 0
+        case .projects:
+            return 550
+        }
+    }
+    
     func getTestData()-> [Event]{
         let all = [
             Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
@@ -47,8 +66,8 @@ enum Aspect {
             Project(title: "HereThere.Be", dateStarted: Date(timeIntervalSinceNow: -10000000.0)),
             Contact(name: "Mom", metAt: "Born", info: "9178547765", fromEvent: nil),
             Contact(name: "Ali", metAt: "Party", info: "4254662904", fromEvent: nil),
-            Appointment(name: "Hacker Meetup", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .meetup),
-            Appointment(name: "date with hot girl", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .informalMeeting)
+            Appointment(address: "Hacker Meetup", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .meetup),
+            Appointment(address: "date with hot girl", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .informalMeeting)
             
         ]
         switch self {
