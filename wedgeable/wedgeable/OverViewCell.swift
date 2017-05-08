@@ -22,8 +22,10 @@ class OverViewCell: UITableViewCell {
                 view.addAndConstrainTo(view: self.contentView)
             case .project(let myProj):
                 let view = ProjectOverView()
+                print ("passing " + myProj.title + " to view")
                 view.project = myProj
                 view.addAndConstrainTo(view: self.contentView)
+                view.setupImages()
             }
         }
     }
@@ -44,6 +46,7 @@ class OverViewCell: UITableViewCell {
     }
     
     func overviewProject(_ myProj: Project) {
+        print("adding " + myProj.title + " to enum")
         self.aspect = Aspect.project(myProj)
     }
 }

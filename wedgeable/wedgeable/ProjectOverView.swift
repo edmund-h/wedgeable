@@ -59,9 +59,11 @@ class ProjectOverView: UIView {
     func setupImages(){
         if project.images.count == 0 {
             let button = makeImageButton()
-            button.titleLabel?.text = "Add up to 5 screenshots of your project!"
+            button.setTitle("Add up to 5 screenshots of your project!", for: .normal)
             button.titleLabel?.numberOfLines = 0
             button.titleLabel?.lineBreakMode = .byWordWrapping
+            button.backgroundColor = UIColor.slashBlue
+            button.setTitleColor(UIColor.black, for: .normal)
             return //will not fall through if this condition is met
         }
         // otherwise function will make buttons whose image is a thumbnail of each project screenshot
@@ -70,13 +72,9 @@ class ProjectOverView: UIView {
         })
     }
     
-    func makeImageButton()->UIButton{
-        let view = UIButton()
-        pictureStack.addSubview(view)
-        view.heightAnchor.constraint(equalTo: pictureStack.heightAnchor).isActive = true
-        view.centerXAnchor.constraint(equalTo: pictureStack.centerXAnchor).isActive = true
-        view.centerYAnchor.constraint(equalTo: pictureStack.centerYAnchor).isActive = true
-        view.widthAnchor.constraint(equalToConstant: 160).isActive = true
-        return view
+    private func makeImageButton()->UIButton{
+        let btn = UIButton()
+        pictureStack.addArrangedSubview(btn)
+        return btn
     }
 }
