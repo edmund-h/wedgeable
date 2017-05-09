@@ -17,6 +17,7 @@ class ProjectOverView: UIView {
     @IBOutlet weak var addGoalBtn: UIButton!
     
     @IBOutlet weak var pictureStack: UIStackView!
+    @IBOutlet weak var stackWidthConstr: NSLayoutConstraint!
     
     @IBOutlet weak var techsField: UITextView!
     @IBOutlet weak var contrbField: UITextView!
@@ -57,13 +58,16 @@ class ProjectOverView: UIView {
     }
     
     func setupImages(){
+        stackWidthConstr.constant = 650
         if project.images.count == 0 {
-            let button = makeImageButton()
-            button.setTitle("Add up to 5 screenshots of your project!", for: .normal)
-            button.titleLabel?.numberOfLines = 0
-            button.titleLabel?.lineBreakMode = .byWordWrapping
-            button.backgroundColor = UIColor.slashBlue
-            button.setTitleColor(UIColor.black, for: .normal)
+            for _ in 1...5 {
+                let button = makeImageButton()
+                button.setTitle("Add up to 5 screenshots of your project!", for: .normal)
+                button.titleLabel?.numberOfLines = 0
+                button.titleLabel?.lineBreakMode = .byWordWrapping
+                button.backgroundColor = UIColor.slashBlue
+                button.setTitleColor(UIColor.black, for: .normal)
+            }
             return //will not fall through if this condition is met
         }
         // otherwise function will make buttons whose image is a thumbnail of each project screenshot

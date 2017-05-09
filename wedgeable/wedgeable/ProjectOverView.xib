@@ -17,6 +17,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="CBM-iD-GyF"/>
                 <outlet property="contrbField" destination="206-eI-C4s" id="3A5-e5-2Wp"/>
                 <outlet property="pictureStack" destination="cNA-TI-4Rd" id="biX-k7-Sbq"/>
+                <outlet property="stackWidthConstr" destination="f7y-0m-R9M" id="mVG-va-JQV"/>
                 <outlet property="stateLabel" destination="XEW-ch-beG" id="XEe-2Q-TaJ"/>
                 <outlet property="techsField" destination="ViZ-Bu-wU8" id="sKk-u3-2c1"/>
             </connections>
@@ -95,7 +96,7 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqI-Sx-Ff6">
                             <rect key="frame" x="0.0" y="0.0" width="337.5" height="220"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cNA-TI-4Rd">
+                                <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cNA-TI-4Rd">
                                     <rect key="frame" x="0.0" y="0.0" width="337.5" height="220"/>
                                 </stackView>
                             </subviews>
