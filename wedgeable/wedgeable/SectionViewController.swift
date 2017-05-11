@@ -38,16 +38,20 @@ class SectionViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        if indexPath.row == 0{
+        let index = indexPath.row
+        if  index == 0{
             let newCell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InfoCell
             newCell.aspect = aspect
             cell = newCell
+        //the first cell here is always going to be an infoView displaying an overview of all entries in this category
         } else {
-            let newCell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
+        //all the other cells are going to be one of two types of EventCell depending on whether there will be sub-entries to display in next VC
+            var identifier = "timelineEventCell"
+            if events[index - 1] is TimelineEntry { identifier = "detailEventCell" }
+            let newCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ListCell
             newCell.event = events[indexPath.row - 1]
             cell = newCell
-        }
-
+        }//timeline => timelineVC, detail => detailVC
         return cell
     }
     
@@ -77,10 +81,11 @@ class SectionViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! TimelineViewController
-        let sender = sender as! ListCell
+        if let destination = segue.destination as? TimelineViewController {
+            let sender = sender as! ListCell
+            destination.event = sender.event
+        }
         
-        destination.event = sender.event
     }
     
 }

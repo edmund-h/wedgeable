@@ -48,8 +48,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return 5
     }
     
+    // TODO: Put together a function that displays all upcoming events within the next 7 days
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        var events = [TimelineEntry]()
+        Aspect.all.forEach({
+            let stuff = $0.getTestData()
+            if let things = stuff as? [TimelineEntry] {
+                events.append(contentsOf: things)
+            }
+        })
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! ListCell
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
     }

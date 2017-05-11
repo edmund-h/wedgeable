@@ -59,10 +59,12 @@ class TimelineViewController: UITableViewController {
     }
     
     func getEntries()->[TimelineEntry]{
+        if timeline.collection.isEmpty { return [TimelineEntry]() }
         let entries = timeline.collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
             return entries
         })
-        return entries.sorted(by:{ (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
+        return entries.sorted(by:{
+            (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
             return entry1.date > entry2.date
         })
        
