@@ -83,5 +83,4 @@ class SectionViewController: UITableViewController {
         destination.event = sender.event
     }
     
-
 }
