@@ -18,6 +18,8 @@ class ProfileView: UIView, InfoView {
     }
     */
     
+    var preferredHeight: CGFloat = 330
+    
     func commonInit() {
         
     }

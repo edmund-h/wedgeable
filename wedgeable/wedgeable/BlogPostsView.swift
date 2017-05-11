@@ -29,6 +29,8 @@ class BlogPostsView: UIView, InfoView {
     @IBOutlet weak var breakdownLabel: UILabel!
     @IBOutlet weak var missingLabel: UILabel!
     
+    var preferredHeight: CGFloat = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

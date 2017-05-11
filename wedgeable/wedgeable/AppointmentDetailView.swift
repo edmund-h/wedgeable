@@ -8,10 +8,12 @@
 
 import UIKit
 
-class AppointmentDetailView: UIView {
+class AppointmentDetailView: UIView, DetailView {
     
     
     weak var appointment: Appointment!
+    
+    var preferredHeight: CGFloat? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)

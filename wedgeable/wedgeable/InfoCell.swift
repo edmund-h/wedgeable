@@ -13,13 +13,13 @@ class InfoCell: UITableViewCell {
     
     var aspect: Aspect? = nil {
         didSet {
-            if let view = self.aspect?.getAspectView() as? UIView{
+            if let view = self.aspect?.getInfoView() as? UIView{
                 view.addAndConstrainTo(view: self.contentView)
             }
             if aspect ==  nil {
-                    self.contentView.subviews.forEach({
-                        $0.removeFromSuperview()
-                    })
+                self.contentView.subviews.forEach({
+                    $0.removeFromSuperview()
+                })
             }
         }
     }
@@ -41,9 +41,5 @@ class InfoCell: UITableViewCell {
 
 
 protocol InfoView {
-    func commonInit()
-}
-
-extension InfoView {
-    
+    var preferredHeight: CGFloat {get}
 }

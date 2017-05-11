@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ApplicationOverView: UIView {
+class ApplicationOverView: UIView, DetailView {
     
     weak var application: Application!
+    
+    var preferredHeight: CGFloat? = 550
     
     override init(frame: CGRect) {
         super.init(frame: frame)

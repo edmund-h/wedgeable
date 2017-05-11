@@ -27,6 +27,8 @@ class AppointmentsView: UIView, InfoView {
     @IBOutlet weak var typeBreakdownLabel: UILabel!
     @IBOutlet weak var nextAdvisor: UILabel!
     
+    var preferredHeight: CGFloat? = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class PostWebView: UIView {
+class PostWebView: UIView, DetailView {
     
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var statusButton: UIButton!
+    
+    var preferredHeight: CGFloat? = nil
     
     weak var post: BlogPost!
     

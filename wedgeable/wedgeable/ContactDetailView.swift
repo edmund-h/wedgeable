@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ContactDetailView: UIView {
+class ContactDetailView: UIView, DetailView {
     
     
     weak var contact: Contact!
+    
+    var preferredHeight: CGFloat? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)

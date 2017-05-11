@@ -25,6 +25,8 @@ class ApplicationsView: UIView, InfoView {
     @IBOutlet weak var applNeedFollowup: UILabel!
     @IBOutlet weak var interviewBreakdown: UILabel!
     
+    var preferredHeight: CGFloat = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

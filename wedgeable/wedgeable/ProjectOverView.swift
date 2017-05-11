@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProjectOverView: UIView {
+class ProjectOverView: UIView, DetailView {
     
     @IBOutlet weak var contentView: UIView!
     
@@ -23,6 +23,8 @@ class ProjectOverView: UIView {
     @IBOutlet weak var contrbField: UITextView!
     
     weak var project: Project!
+    
+    var preferredHeight: CGFloat? = 550
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -10,11 +10,7 @@ import UIKit
 
 class TimelineCell: UITableViewCell {
     
-    var item: TimelineEntry? = nil {
-        didSet {
-            
-        }
-    }
+    var item: TimelineEntry?
     
     override func awakeFromNib() {
         super.awakeFromNib()

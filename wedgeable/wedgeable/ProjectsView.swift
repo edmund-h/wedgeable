@@ -33,6 +33,8 @@ class ProjectsView: UIView, InfoView {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var nextGoalLabel: UILabel!
     
+    var preferredHeight: CGFloat = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

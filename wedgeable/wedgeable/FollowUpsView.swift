@@ -28,6 +28,8 @@ class FollowUpsView: UIView, InfoView {
     @IBOutlet weak var onTimeRatioLabel: UILabel!
     @IBOutlet weak var avgTimeLabel: UILabel!
     
+    var preferredHeight: CGFloat = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

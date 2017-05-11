@@ -8,10 +8,12 @@
 
 import UIKit
 
-class FollowUpDetailView: UIView {
+class FollowUpDetailView: UIView, DetailView {
     
     
     weak var followUp: FollowUp!
+    
+    var preferredHeight: CGFloat? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)

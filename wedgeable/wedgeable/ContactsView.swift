@@ -18,6 +18,8 @@ class ContactsView: UIView, InfoView {
     @IBOutlet weak var mostValuableLabel: UILabel!
     @IBOutlet weak var needsFollowUpLabel: UILabel!
     
+    var preferredHeight: CGFloat = 330
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

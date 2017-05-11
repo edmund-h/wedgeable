@@ -13,7 +13,7 @@ enum Aspect {
     
     static let all = [Aspect.profile, Aspect.applications, Aspect.followups, Aspect.appointments, Aspect.blogposts, Aspect.projects, Aspect.contacts]
     
-    func getAspectView()-> InfoView{
+    func getInfoView()-> InfoView{
         switch self {
         case .profile:
             return ProfileView()
@@ -31,6 +31,8 @@ enum Aspect {
             return ProjectsView()
         }
     }
+    
+    func getDetailView()-> 
     
     func getXibHeight()-> Double{
         switch self {

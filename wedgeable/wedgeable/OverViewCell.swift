@@ -14,7 +14,12 @@ class OverViewCell: UITableViewCell {
     
     var aspect: Aspect? = nil{
         didSet {
-            guard let aspect = aspect else {return}
+            guard let aspect = aspect else {
+                self.subviews.forEach({
+                    $0.removeFromSuperview()
+                })
+                return
+            }
             switch aspect {
             case .application(let myApp):
                 let view = ApplicationOverView()
@@ -49,4 +54,8 @@ class OverViewCell: UITableViewCell {
         print("adding " + myProj.title + " to enum")
         self.aspect = Aspect.project(myProj)
     }
+}
+
+protocol DetailView {
+    var preferredHeight: CGFloat? {get}
 }
