@@ -39,7 +39,7 @@ class TimelineViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getEntries().count + 1
+        return timeline.count + 1
     }
 
     
@@ -54,20 +54,8 @@ class TimelineViewController: UITableViewController {
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell", for: indexPath) as! TimelineCell
-        cell.textLabel?.text = getEntries()[indexPath.row - 1].description
+        cell.textLabel?.text = timeline.getEntry(indexPath.row - 1).description
         return cell
-    }
-    
-    func getEntries()->[TimelineEntry]{
-        if timeline.collection.isEmpty { return [TimelineEntry]() }
-        let entries = timeline.collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
-            return entries
-        })
-        return entries.sorted(by:{
-            (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
-            return entry1.date > entry2.date
-        })
-       
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

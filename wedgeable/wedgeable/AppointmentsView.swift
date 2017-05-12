@@ -27,7 +27,7 @@ class AppointmentsView: UIView, InfoView {
     @IBOutlet weak var typeBreakdownLabel: UILabel!
     @IBOutlet weak var nextAdvisor: UILabel!
     
-    var preferredHeight: CGFloat? = 330
+    var preferredHeight: CGFloat = 330
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,9 +47,6 @@ class AppointmentsView: UIView, InfoView {
         
         contentView.addAndConstrainTo(view: self)
         self.backgroundColor = UIColor.wallGreen
-    }
-    
-    func formatSelf() {
     }
 }
 

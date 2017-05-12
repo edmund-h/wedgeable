@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		881A000E1EC4E81B00675433 /* PostWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A000D1EC4E81B00675433 /* PostWebView.xib */; };
 		881A00121EC5188100675433 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00111EC5188100675433 /* DetailViewController.swift */; };
+		881A00141EC5301D00675433 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00131EC5301D00675433 /* ListCell.swift */; };
 		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
@@ -49,7 +50,6 @@
 		88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */; };
 		88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */; };
 		88BC8DD81EB540FC00D7EAE2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */; };
-		88BC8DDA1EB5412900D7EAE2 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DD91EB5412900D7EAE2 /* ListCell.swift */; };
 		88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC8DDB1EB5418D00D7EAE2 /* Aspect.swift */; };
 		88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */; };
 		88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA401EB5109B00DFCF8C /* Main.storyboard */; };
@@ -74,6 +74,7 @@
 /* Begin PBXFileReference section */
 		881A000D1EC4E81B00675433 /* PostWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostWebView.xib; sourceTree = "<group>"; };
 		881A00111EC5188100675433 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		881A00131EC5301D00675433 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		88BC8DD11EB5153E00D7EAE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BC8DD51EB536BF00D7EAE2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
-		88BC8DD91EB5412900D7EAE2 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		88BC8DDB1EB5418D00D7EAE2 /* Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aspect.swift; sourceTree = "<group>"; };
 		88C6CA391EB5109B00DFCF8C /* wedgeable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wedgeable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6CA3C1EB5109B00DFCF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				88BC8DD71EB540FC00D7EAE2 /* InfoCell.swift */,
-				88BC8DD91EB5412900D7EAE2 /* ListCell.swift */,
 				88B230B41EBF8FF600F6043F /* OverViewCell.swift */,
+				881A00131EC5301D00675433 /* ListCell.swift */,
 				886360D81EB7C42A0011A7C9 /* TimelineCell.swift */,
 				886360C21EB79B2F0011A7C9 /* ContactsView.swift */,
 				886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */,
@@ -214,9 +214,9 @@
 				886360CE1EB7A3D60011A7C9 /* SectionViewController.swift */,
 				88B230B81EBFC1F100F6043F /* TimelineViewController.swift */,
 				886360DC1EBA695D0011A7C9 /* EventViewController.swift */,
+				881A00111EC5188100675433 /* DetailViewController.swift */,
 				886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */,
 				886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */,
-				881A00111EC5188100675433 /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -400,10 +400,10 @@
 				88B230A91EBF87D100F6043F /* ContactDetailView.swift in Sources */,
 				8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */,
 				8882FEB91EB57A8A001B210A /* Project.swift in Sources */,
+				881A00141EC5301D00675433 /* ListCell.swift in Sources */,
 				886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */,
 				88C6CA3D1EB5109B00DFCF8C /* AppDelegate.swift in Sources */,
 				886360DF1EBA6C160011A7C9 /* ProfileViewController.swift in Sources */,
-				88BC8DDA1EB5412900D7EAE2 /* ListCell.swift in Sources */,
 				886360D51EB7AB600011A7C9 /* ProfileView.swift in Sources */,
 				886360DD1EBA695D0011A7C9 /* EventViewController.swift in Sources */,
 				88C6CA451EB5109B00DFCF8C /* wedgeable.xcdatamodeld in Sources */,

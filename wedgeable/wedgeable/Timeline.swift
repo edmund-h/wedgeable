@@ -12,12 +12,23 @@ class Timeline {
     
     let scope: Aspect
     var collection: [Date:[TimelineEntry]] = [:]
+    var count: Int {
+        if collection.isEmpty { return 0 }
+        let colEntries = collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
+            return entries
+        })
+        return colEntries.count
+    }
+    
+    init () {
+        self.scope = .profile
+    }
     
     init (scope: Aspect) {
         self.scope = scope
     }
     
-    func append(_ elements: [TimelineEntry]){
+    func append(_ elements: [TimelineEntry]) {
         elements.forEach({
             if var entries = collection[$0.date]{
                 entries.append($0)
@@ -28,14 +39,40 @@ class Timeline {
         })
     }
     
-    func append(timeline: Timeline){
+    func append(timeline: Timeline) {
         timeline.collection.keys.forEach({
             guard let elems = timeline.collection[$0] else {return}
             self.append(elems)
         })
     }
     
+    func getEntries()->[TimelineEntry] {
+        if collection.isEmpty { return [TimelineEntry]() }
+        let entries = collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
+            return entries
+        })
+        return entries.sorted(by:{
+            (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
+            return entry1.date > entry2.date
+        })
+        
+    }
     
+    func getEntries(upToDate: TimeInterval)->[TimelineEntry] {
+        let entries = collection.flatMap({ (date: Date, entries: [TimelineEntry])->[TimelineEntry] in
+            if date.timeIntervalSinceNow <= upToDate { return entries }
+            return []
+        })
+        return entries.sorted(by:{
+            (entry1: TimelineEntry, entry2: TimelineEntry)->Bool in
+            return entry1.date > entry2.date
+        })
+    }
+    
+    func getEntry(_ ordinal: Int)->TimelineEntry {
+        let entries = getEntries()
+        return entries[ordinal]
+    }
 }
 
 struct ApplyMilestone: TimelineEntry {

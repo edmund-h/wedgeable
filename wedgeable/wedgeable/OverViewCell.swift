@@ -54,6 +54,13 @@ class OverViewCell: UITableViewCell {
         print("adding " + myProj.title + " to enum")
         self.aspect = Aspect.project(myProj)
     }
+    
+    func getPreferredHeight()-> CGFloat?{
+        if let view = self.contentView as? DetailView{
+            return view.preferredHeight
+        }
+        return nil
+    }
 }
 
 protocol DetailView {

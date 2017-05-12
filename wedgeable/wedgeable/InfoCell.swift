@@ -11,9 +11,12 @@ import Foundation
 
 class InfoCell: UITableViewCell {
     
+    weak var infoView: InfoView?
     var aspect: Aspect? = nil {
         didSet {
-            if let view = self.aspect?.getInfoView() as? UIView{
+            if let infoView = self.aspect?.getInfoView(),
+                let view = infoView as? UIView{
+                self.infoView = infoView
                 view.addAndConstrainTo(view: self.contentView)
             }
             if aspect ==  nil {
@@ -35,11 +38,18 @@ class InfoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func getPreferredHeight()-> CGFloat {
+        if let height = self.infoView?.preferredHeight {
+            return height
+        }
+        return 0
+    }
 
 }
 
 
 
-protocol InfoView {
+protocol InfoView: class {
     var preferredHeight: CGFloat {get}
 }

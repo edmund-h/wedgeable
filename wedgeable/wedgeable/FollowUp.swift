@@ -9,6 +9,8 @@
 import Foundation
 
 class FollowUp: Event, TimelineEntry {
+    
+    //TODO: there is a possible issue with the event to which this followup is attached being deallocated, and that deallocates the Followup. We have to declare events in a way that is persistent or figure out how to relate a FU to an event without a direct reference
     unowned var event: Event
     enum Method: String {
         case phone = "Phone", email = "eMail", inPerson = "In Person", socialMedia = "Social Media", mail = "Mail", gift = "Gift", goal = "Goal"

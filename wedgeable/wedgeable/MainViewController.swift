@@ -11,9 +11,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var events = Timeline()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Aspect.all.forEach({
+            let stuff = $0.getTestData()
+            print (stuff.description)
+            if let things = stuff as? [TimelineEntry] {
+                events.append(things)
+            }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,20 +53,13 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return events.count
     }
     
     // TODO: Put together a function that displays all upcoming events within the next 7 days
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var events = [TimelineEntry]()
-        Aspect.all.forEach({
-            let stuff = $0.getTestData()
-            if let things = stuff as? [TimelineEntry] {
-                events.append(contentsOf: things)
-            }
-        })
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! ListCell
-        cell.textLabel?.text = "\(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TimelineCell
+        cell.textLabel?.text = "\(events.getEntry(indexPath.row).description)"
         return cell
     }
     

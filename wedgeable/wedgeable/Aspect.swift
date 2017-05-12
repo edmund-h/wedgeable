@@ -32,7 +32,24 @@ enum Aspect {
         }
     }
     
-    func getDetailView()-> 
+    func getDetailView()-> DetailView{
+        switch self {
+        case .profile:
+            return ContactDetailView()
+        case .contacts:
+            return ContactDetailView()
+        case .applications:
+            return ApplicationOverView()
+        case .followups:
+            return FollowUpDetailView()
+        case.appointments:
+            return AppointmentDetailView()
+        case .blogposts:
+            return PostWebView()
+        case .projects:
+            return ProjectOverView()
+        }
+    }
     
     func getXibHeight()-> Double{
         switch self {
@@ -55,15 +72,10 @@ enum Aspect {
     
     func getTestData()-> [Event]{
         let all = [
-            Event(name: "lol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-            Event(name: "loll", date: Date(timeIntervalSinceNow: 0), aspect: .blogposts ),
-            Event(name: "lolll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-            Event(name: "llol", date: Date(timeIntervalSinceNow: 0), aspect: .applications),
-            Event(name: "lllol", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-            Event(name: "lloll", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-            Event(name: "lllolll", date: Date(timeIntervalSinceNow: 0), aspect: .appointments),
-            Event(name: "loool", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
-            Event(name: "lolol", date: Date(timeIntervalSinceNow: 0), aspect: .followups),
+//            FollowUp(forEvent: Event(name: "llol", date: Date(timeIntervalSinceNow: -800000.0), aspect: .applications)),
+//            FollowUp(forEvent: Event(name: "lllol", date: Date(timeIntervalSinceNow: -210100.0), aspect: .appointments)),
+//            FollowUp(forEvent: Event(name: "lloll", date: Date(timeIntervalSinceNow: -905000.0), aspect: .followups)),
+//            FollowUp(forEvent: Event(name: "lllolll", date: Date(timeIntervalSinceNow: -505000.0), aspect: .appointments)),
             Project(title: "Wedgeable", dateStarted: Date(timeIntervalSinceNow: -750000.0)),
             Project(title: "HereThere.Be", dateStarted: Date(timeIntervalSinceNow: -10000000.0)),
             Contact(name: "Mom", metAt: "Born", info: "9178547765", fromEvent: nil),
