@@ -390,8 +390,23 @@
                     <view key="view" contentMode="scaleToFill" id="axT-Gn-L8m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2j-cx-ZCp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.96078431369999995" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZsR-ZS-ksC" firstAttribute="top" secondItem="I2j-cx-ZCp" secondAttribute="bottom" id="0Lj-uA-JFI"/>
+                            <constraint firstItem="I2j-cx-ZCp" firstAttribute="top" secondItem="NrR-Df-Q1a" secondAttribute="bottom" id="GU7-pt-HHN"/>
+                            <constraint firstAttribute="trailing" secondItem="I2j-cx-ZCp" secondAttribute="trailing" id="Ob2-Cf-eKF"/>
+                            <constraint firstItem="I2j-cx-ZCp" firstAttribute="leading" secondItem="axT-Gn-L8m" secondAttribute="leading" id="xha-NZ-zhP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentFrame" destination="I2j-cx-ZCp" id="5kK-ps-UrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXw-51-fQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

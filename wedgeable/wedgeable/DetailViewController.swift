@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     // This VC will grab an event that DOES NOT have subevents and display a full screen view of the event's details. It will determine the appropriate xib to load and know all the notifications to look for
+    @IBOutlet weak var contentFrame: UIView!
     
     weak var event: Event!
     
@@ -19,8 +20,7 @@ class DetailViewController: UIViewController {
         self.title = event.name
         //get the view from xib
         let eventView = Aspect.getDetailView(forEvent: event)
-        
-        eventView.addAndConstrainTo(view: self.view)
+        eventView.addAndConstrainTo(view: self.contentFrame)
         
     }
 
