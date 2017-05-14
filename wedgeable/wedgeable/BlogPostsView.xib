@@ -26,9 +26,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blog Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4q-ae-xux">
-                    <rect key="frame" x="145" y="20" width="84" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4q-ae-xux">
+                    <rect key="frame" x="146.5" y="20" width="81.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -75,7 +74,9 @@
                 <constraint firstItem="gSz-0j-MqC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Dnk-Ij-n2F"/>
                 <constraint firstItem="6Cu-9L-rXr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EdB-Oz-9Pl"/>
                 <constraint firstItem="BdT-Z3-tx7" firstAttribute="top" secondItem="I3U-wg-A8r" secondAttribute="bottom" constant="25" id="GIt-s2-erF"/>
+                <constraint firstItem="i4q-ae-xux" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="H9Q-Ri-sZR"/>
                 <constraint firstItem="gSz-0j-MqC" firstAttribute="top" secondItem="BdT-Z3-tx7" secondAttribute="bottom" constant="25" id="HGy-Nj-ZDa"/>
+                <constraint firstItem="i4q-ae-xux" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Tuw-aD-4yp"/>
                 <constraint firstItem="6Cu-9L-rXr" firstAttribute="top" secondItem="gSz-0j-MqC" secondAttribute="bottom" constant="25" id="Twd-E8-DtX"/>
                 <constraint firstItem="6Cu-9L-rXr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="Yic-qt-7SB"/>
                 <constraint firstItem="gMP-oZ-iIc" firstAttribute="centerX" secondItem="6Cu-9L-rXr" secondAttribute="centerX" id="Yrv-m4-l7S"/>
