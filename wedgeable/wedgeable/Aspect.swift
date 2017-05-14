@@ -36,9 +36,9 @@ enum Aspect {
         switch event.aspect {
         case .profile:
             // unused
-            return ContactDetailView()
+            return ContactOverView()
         case .contacts:
-            let view = ContactDetailView()
+            let view = ContactOverView()
             view.contact = event as! Contact
             return view
         case .applications:
