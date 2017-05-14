@@ -63,6 +63,4 @@ class OverViewCell: UITableViewCell {
     }
 }
 
-protocol DetailView {
-    var preferredHeight: CGFloat? {get}
-}
+

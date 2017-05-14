@@ -81,6 +81,10 @@ class SectionViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            let sender = sender as! ListCell
+            destination.event = sender.event
+        }//this is not DRY. protocol?
         if let destination = segue.destination as? TimelineViewController {
             let sender = sender as! ListCell
             destination.event = sender.event

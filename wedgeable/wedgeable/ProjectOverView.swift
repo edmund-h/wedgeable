@@ -37,6 +37,7 @@ class ProjectOverView: UIView, DetailView {
     }
     
     func commonInit() {
+        // DO NOT ASSIGN EVENT PROPERTIES TO VIEWS IN COMMON INIT
         Bundle.main.loadNibNamed("ProjectOverView", owner: self, options: nil)
         
         contentView.addAndConstrainTo(view: self)
@@ -48,15 +49,19 @@ class ProjectOverView: UIView, DetailView {
     }
     
     @IBAction func newGoal(_ sender: UIButton) {
+        //should just send up a notification
     }
     
     @IBAction func editTechs(_ sender: UIButton) {
+        //should just send up a notification
     }
     
     @IBAction func editContrbs(_ sender: UIButton) {
+        //should just send up a notification
     }
     
     @IBAction func addImage(_ sender: UIButton) {
+        //should just send up a notification
     }
     
     func setupImages(){
@@ -83,4 +88,7 @@ class ProjectOverView: UIView, DetailView {
         pictureStack.addArrangedSubview(btn)
         return btn
     }
+    
+    //TODO: Implement this f(x) for this and all other detail/overViews
+    //func loadEventData()
 }

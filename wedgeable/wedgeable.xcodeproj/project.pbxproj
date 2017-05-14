@@ -10,6 +10,7 @@
 		881A000E1EC4E81B00675433 /* PostWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A000D1EC4E81B00675433 /* PostWebView.xib */; };
 		881A00121EC5188100675433 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00111EC5188100675433 /* DetailViewController.swift */; };
 		881A00141EC5301D00675433 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00131EC5301D00675433 /* ListCell.swift */; };
+		881A00181EC88F4600675433 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00171EC88F4600675433 /* ViewProtocols.swift */; };
 		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
@@ -75,6 +76,7 @@
 		881A000D1EC4E81B00675433 /* PostWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostWebView.xib; sourceTree = "<group>"; };
 		881A00111EC5188100675433 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		881A00131EC5301D00675433 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		881A00171EC88F4600675433 /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				88B230A81EBF87D100F6043F /* ContactDetailView.swift */,
 				88B230AA1EBF87EC00F6043F /* FollowUpDetailView.swift */,
 				88B230AC1EBF886700F6043F /* AppointmentDetailView.swift */,
+				881A00171EC88F4600675433 /* ViewProtocols.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				881A00121EC5188100675433 /* DetailViewController.swift in Sources */,
 				8882FEB51EB56941001B210A /* Appointment.swift in Sources */,
+				881A00181EC88F4600675433 /* ViewProtocols.swift in Sources */,
 				88FBC5401EB66C74003106E5 /* Date.swift in Sources */,
 				88B230A91EBF87D100F6043F /* ContactDetailView.swift in Sources */,
 				8882FEB71EB571DA001B210A /* BlogPost.swift in Sources */,

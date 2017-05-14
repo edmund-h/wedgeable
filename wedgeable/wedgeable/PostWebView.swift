@@ -31,14 +31,14 @@ class PostWebView: UIView, DetailView {
     }
     
     func commonInit() {
+        // DO NOT ASSIGN EVENT PROPERTIES TO VIEWS IN COMMON INIT
         Bundle.main.loadNibNamed("PostWebView", owner: self, options: nil)
         
         contentView.addAndConstrainTo(view: self)
         contentView.backgroundColor = UIColor.slashBlue
         
-        dueDateLabel.text = "Created: \(post.dueDate)"
-        
-        setupStatusButton()
+        //this should get called in loadEventData
+        //setupStatusButton()
         
         webView.scalesPageToFit = true
     }
@@ -65,4 +65,7 @@ class PostWebView: UIView, DetailView {
         let notification = Notification(name: Notification.Name(rawValue: "ChangeBlogPostStatus"))
         NotificationCenter.default.post(notification)
     }
+    
+    //TODO: Implement this f(x) for this and all other detail/overViews
+    //func loadEventData()
 }

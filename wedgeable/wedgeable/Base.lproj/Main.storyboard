@@ -352,7 +352,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pQu-Zo-asc" kind="show" identifier="TimelineSegue" id="5xw-9B-oju"/>
+                                    <segue destination="pQu-Zo-asc" kind="show" identifier="timelineSegue" id="5xw-9B-oju"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailEventCell" id="zTf-A1-PVA" customClass="ListCell" customModule="wedgeable" customModuleProvider="target">
@@ -363,7 +363,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aH3-z5-4w3" kind="show" id="VFZ-ql-pEh"/>
+                                    <segue destination="aH3-z5-4w3" kind="show" identifier="detailSegue" id="VFZ-ql-pEh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -382,7 +382,7 @@
         <!--Detail View Controller-->
         <scene sceneID="hdf-5p-yr5">
             <objects>
-                <viewController storyboardIdentifier="Detail View Controller" title="Detail View Controller" id="aH3-z5-4w3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail View Controller" title="Detail View Controller" id="aH3-z5-4w3" customClass="DetailViewController" customModule="wedgeable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NrR-Df-Q1a"/>
                         <viewControllerLayoutGuide type="bottom" id="ZsR-ZS-ksC"/>

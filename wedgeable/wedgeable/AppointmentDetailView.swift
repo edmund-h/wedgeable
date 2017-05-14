@@ -26,6 +26,7 @@ class AppointmentDetailView: UIView, DetailView {
     }
     
     func commonInit() {
+        // DO NOT ASSIGN EVENT PROPERTIES TO VIEWS IN COMMON INIT
         
     }
 }

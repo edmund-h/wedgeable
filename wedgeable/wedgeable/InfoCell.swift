@@ -50,6 +50,3 @@ class InfoCell: UITableViewCell {
 
 
 
-protocol InfoView: class {
-    var preferredHeight: CGFloat {get}
-}

@@ -32,21 +32,33 @@ enum Aspect {
         }
     }
     
-    func getDetailView()-> DetailView{
-        switch self {
+    static func getDetailView(forEvent event: Event)-> DetailView{
+        switch event.aspect {
         case .profile:
+            // unused
             return ContactDetailView()
         case .contacts:
-            return ContactDetailView()
+            let view = ContactDetailView()
+            view.contact = event as! Contact
+            return view
         case .applications:
+            //unused
             return ApplicationOverView()
         case .followups:
-            return FollowUpDetailView()
+            let view = FollowUpDetailView()
+            view.followUp = event as! FollowUp
+            return view
         case.appointments:
-            return AppointmentDetailView()
+            let view = AppointmentDetailView()
+            view.appointment = event as! Appointment
+            return view
         case .blogposts:
-            return PostWebView()
+            let view = PostWebView()
+            print ("assign post \(event.name) to view")
+            view.post = event as! BlogPost
+            return view
         case .projects:
+            //unused
             return ProjectOverView()
         }
     }
@@ -71,6 +83,10 @@ enum Aspect {
     }
     
     func getTestData()-> [Event]{
+        let blogPost1 = BlogPost(due: Date(timeIntervalSinceNow: 405000))
+        blogPost1.isInProgress(about: "building wedgeable")
+        let blogPost2 = BlogPost(due: Date(timeIntervalSinceNow: -750000))
+        blogPost2.isCompleted(titled: "xibs in 8 steps", published: Date(timeIntervalSinceNow: -150000) , webAddress: URL(fileURLWithPath: "yuck"))
         let all = [
 //            FollowUp(forEvent: Event(name: "llol", date: Date(timeIntervalSinceNow: -800000.0), aspect: .applications)),
 //            FollowUp(forEvent: Event(name: "lllol", date: Date(timeIntervalSinceNow: -210100.0), aspect: .appointments)),
@@ -81,8 +97,8 @@ enum Aspect {
             Contact(name: "Mom", metAt: "Born", info: "9178547765", fromEvent: nil),
             Contact(name: "Ali", metAt: "Party", info: "4254662904", fromEvent: nil),
             Appointment(address: "Hacker Meetup", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .meetup),
-            Appointment(address: "date with hot girl", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .informalMeeting)
-            
+            Appointment(address: "date with hot girl", starting: Date(timeIntervalSinceNow: 750000.0), duration: (180.0*60.0), type: .informalMeeting),
+            blogPost1, blogPost2
         ]
         switch self {
         case .profile:

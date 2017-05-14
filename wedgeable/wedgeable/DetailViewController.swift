@@ -16,9 +16,12 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.title = event.name
-        //get the view from
+        //get the view from xib
+        let eventView = Aspect.getDetailView(forEvent: event)
+        
+        eventView.addAndConstrainTo(view: self.view)
+        
     }
 
     override func didReceiveMemoryWarning() {
