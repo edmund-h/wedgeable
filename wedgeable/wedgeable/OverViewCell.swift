@@ -10,7 +10,7 @@ import UIKit
 
 class OverViewCell: UITableViewCell {
     
-    enum Aspect { case application(Application), project(Project) }
+    enum Aspect { case application(Application), project(Project), contact(Contact) }
     
     var aspect: Aspect? = nil{
         didSet {
@@ -31,6 +31,10 @@ class OverViewCell: UITableViewCell {
                 view.project = myProj
                 view.addAndConstrainTo(view: self.contentView)
                 view.setupImages()
+            case.contact(let myContact):
+                let view = ContactOverView()
+                view.contact = myContact
+                view.addAndConstrainTo(view: self.contentView)
             }
         }
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailView: UIView, DetailView {
+class ContactOverView: UIView, DetailView {
     
     
     weak var contact: Contact!
