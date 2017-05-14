@@ -11,6 +11,7 @@
 		881A00121EC5188100675433 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00111EC5188100675433 /* DetailViewController.swift */; };
 		881A00141EC5301D00675433 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00131EC5301D00675433 /* ListCell.swift */; };
 		881A001A1EC8922300675433 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00191EC8922300675433 /* ViewProtocols.swift */; };
+		881A001C1EC8943F00675433 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A001B1EC8943F00675433 /* ContactDetailView.xib */; };
 		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
@@ -77,6 +78,7 @@
 		881A00111EC5188100675433 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		881A00131EC5301D00675433 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		881A00191EC8922300675433 /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
+		881A001B1EC8943F00675433 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				88B230A01EBF034F00F6043F /* FollowUpsView.xib */,
 				88B230B61EBFA2A000F6043F /* ProjectOverView.xib */,
 				881A000D1EC4E81B00675433 /* PostWebView.xib */,
+				881A001B1EC8943F00675433 /* ContactDetailView.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */,
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
 				88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */,
+				881A001C1EC8943F00675433 /* ContactDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

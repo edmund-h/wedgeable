@@ -23,23 +23,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waG-V9-Cpe">
-                    <rect key="frame" x="0.0" y="101" width="375" height="566"/>
+                    <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChB-l0-2J7">
-                    <rect key="frame" x="146" y="20" width="83.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due: MM/DD/YY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsF-Wf-Vvh">
-                    <rect key="frame" x="40" y="58" width="98.5" height="16"/>
+                    <rect key="frame" x="40" y="25" width="98.5" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yPy-TH-Ttv">
-                    <rect key="frame" x="194" y="52" width="141" height="28"/>
+                    <rect key="frame" x="194" y="19" width="141" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="141" id="obX-hd-3HO"/>
                     </constraints>
@@ -54,16 +48,14 @@
             </subviews>
             <color key="backgroundColor" red="0.1764705882" green="0.61176470589999998" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="waG-V9-Cpe" firstAttribute="top" secondItem="HsF-Wf-Vvh" secondAttribute="bottom" constant="24" id="F5r-V3-24b"/>
                 <constraint firstAttribute="bottom" secondItem="waG-V9-Cpe" secondAttribute="bottom" id="G5X-4Q-Lhf"/>
-                <constraint firstItem="ChB-l0-2J7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="UAz-0B-EuI"/>
+                <constraint firstItem="waG-V9-Cpe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="65" id="M25-sP-Vhn"/>
                 <constraint firstAttribute="trailing" secondItem="waG-V9-Cpe" secondAttribute="trailing" id="YCk-id-x9c"/>
-                <constraint firstItem="HsF-Wf-Vvh" firstAttribute="top" secondItem="ChB-l0-2J7" secondAttribute="bottom" constant="17" id="ZTN-Zd-Ukj"/>
-                <constraint firstItem="ChB-l0-2J7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fH2-zA-QPB"/>
+                <constraint firstItem="waG-V9-Cpe" firstAttribute="top" secondItem="yPy-TH-Ttv" secondAttribute="bottom" constant="18" id="cpg-XI-JTz"/>
+                <constraint firstItem="HsF-Wf-Vvh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="iiD-AC-aQC"/>
                 <constraint firstItem="waG-V9-Cpe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iyk-Xm-kvq"/>
                 <constraint firstAttribute="trailing" secondItem="yPy-TH-Ttv" secondAttribute="trailing" constant="40" id="jWq-DK-qlp"/>
-                <constraint firstItem="waG-V9-Cpe" firstAttribute="top" secondItem="ChB-l0-2J7" secondAttribute="bottom" constant="60" id="jl0-2n-ieS"/>
-                <constraint firstItem="HsF-Wf-Vvh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="oFQ-v3-geJ"/>
-                <constraint firstItem="yPy-TH-Ttv" firstAttribute="centerY" secondItem="HsF-Wf-Vvh" secondAttribute="centerY" id="q0K-8p-yve"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="72.5"/>
         </view>
