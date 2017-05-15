@@ -22,5 +22,4 @@ class Event {
         } else { self.aspect = .contacts }
     }
     
-    
 }

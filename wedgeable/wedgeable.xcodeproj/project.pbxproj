@@ -13,6 +13,7 @@
 		881A001A1EC8922300675433 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A00191EC8922300675433 /* ViewProtocols.swift */; };
 		881A001C1EC8943F00675433 /* ContactOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A001B1EC8943F00675433 /* ContactOverView.xib */; };
 		881A001E1EC8A6CD00675433 /* ContactOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A001D1EC8A6CD00675433 /* ContactOverView.swift */; };
+		881A00201EC923AA00675433 /* ApplicationOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A001F1EC923AA00675433 /* ApplicationOverView.xib */; };
 		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
@@ -80,6 +81,7 @@
 		881A00191EC8922300675433 /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
 		881A001B1EC8943F00675433 /* ContactOverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactOverView.xib; sourceTree = "<group>"; };
 		881A001D1EC8A6CD00675433 /* ContactOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOverView.swift; sourceTree = "<group>"; };
+		881A001F1EC923AA00675433 /* ApplicationOverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationOverView.xib; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				88B230B61EBFA2A000F6043F /* ProjectOverView.xib */,
 				881A000D1EC4E81B00675433 /* PostWebView.xib */,
 				881A001B1EC8943F00675433 /* ContactOverView.xib */,
+				881A001F1EC923AA00675433 /* ApplicationOverView.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				88B230A11EBF034F00F6043F /* FollowUpsView.xib in Resources */,
 				88B230B71EBFA2A000F6043F /* ProjectOverView.xib in Resources */,
 				881A000E1EC4E81B00675433 /* PostWebView.xib in Resources */,
+				881A00201EC923AA00675433 /* ApplicationOverView.xib in Resources */,
 				886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */,
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
 				88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */,

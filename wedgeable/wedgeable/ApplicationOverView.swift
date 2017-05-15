@@ -10,6 +10,10 @@ import UIKit
 
 class ApplicationOverView: UIView, DetailView {
     
+    @IBOutlet weak var positionCompanyDateLabel: UILabel!
+    @IBOutlet weak var nextFollowUpDate: UILabel!
+    @IBOutlet weak var goToLinkButton: UIButton!
+    @IBOutlet weak var contactInfoStack: UIStackView!
     weak var application: Application!
     
     var preferredHeight: CGFloat? = 550
@@ -26,6 +30,8 @@ class ApplicationOverView: UIView, DetailView {
     
     func commonInit() {
         // DO NOT ASSIGN EVENT PROPERTIES TO VIEWS IN COMMON INIT
+        contactInfoStack.layer.borderColor = UIColor.black.cgColor
+        contactInfoStack.layer.cornerRadius = 8
         
     }
     

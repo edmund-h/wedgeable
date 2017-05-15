@@ -85,6 +85,7 @@ struct ApplyMilestone: TimelineEntry {
 struct ProjectMilestone: TimelineEntry {
     var status: Project.Status
     var date: Date
+    var timesPushed: Int = 0
     var description: String
     var attained: Bool
 }
