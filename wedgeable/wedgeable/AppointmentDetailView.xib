@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppointmentDetailView" customModule="wedgeable" customModuleProvider="target">
+            <connections>
+                <outlet property="beginDateLabel" destination="SHI-fI-kX9" id="Pws-cH-X73"/>
+                <outlet property="completedView" destination="44J-74-E2i" id="7js-0U-rDd"/>
+                <outlet property="contactInfoStack" destination="uUm-Ox-Uyr" id="IJU-cK-WqN"/>
+                <outlet property="descriptionLabel" destination="43k-g5-zaw" id="xA9-22-rp7"/>
+                <outlet property="descriptionTextField" destination="1ti-mk-vHo" id="wlt-Ef-NmR"/>
+                <outlet property="endDateLabel" destination="JLk-Vl-xFC" id="03X-E7-kbW"/>
+                <outlet property="markCompleteButton" destination="aVB-gZ-QuR" id="7Sf-uZ-aDe"/>
+                <outlet property="needsFollowUpLabel" destination="44Y-gQ-Ydw" id="m0N-1o-j67"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begins: MM/DD/YYY HH:MM XM (XX hours)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHI-fI-kX9">
+                    <rect key="frame" x="25" y="97" width="264.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ends:    MM/DD/YYY HH:MM XM (XX minutes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLk-Vl-xFC">
+                    <rect key="frame" x="25" y="138" width="278" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informal Meeting with Chandragupta Ramakrishnan, Senior Back End Engineer at Really Long Company Name Incorporated" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43k-g5-zaw">
+                    <rect key="frame" x="25" y="25" width="316" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-Ox-Uyr">
+                    <rect key="frame" x="19" y="185" width="337.5" height="247.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uUm-Ox-Uyr" secondAttribute="height" multiplier="15:11" id="LbQ-Qu-H50"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44J-74-E2i">
+                    <rect key="frame" x="18" y="462" width="337.5" height="179.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Needs FollowUp by: MM/DD/YY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-gQ-Ydw">
+                            <rect key="frame" x="48.5" y="0.0" width="242" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1ti-mk-vHo">
+                            <rect key="frame" x="0.0" y="51.5" width="337.5" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705882" green="0.61176470589999998" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1ti-mk-vHo" secondAttribute="bottom" id="K0h-C7-ldw"/>
+                        <constraint firstItem="1ti-mk-vHo" firstAttribute="top" secondItem="44J-74-E2i" secondAttribute="top" constant="51.5" id="XBC-cg-RA7"/>
+                        <constraint firstItem="44Y-gQ-Ydw" firstAttribute="centerX" secondItem="44J-74-E2i" secondAttribute="centerX" id="XvX-gH-lBg"/>
+                        <constraint firstAttribute="trailing" secondItem="1ti-mk-vHo" secondAttribute="trailing" id="cF8-mE-brt"/>
+                        <constraint firstItem="44Y-gQ-Ydw" firstAttribute="top" secondItem="44J-74-E2i" secondAttribute="top" id="vMV-v3-VUh"/>
+                        <constraint firstItem="1ti-mk-vHo" firstAttribute="leading" secondItem="44J-74-E2i" secondAttribute="leading" id="zOh-ld-Zqf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVB-gZ-QuR">
+                    <rect key="frame" x="120" y="464" width="135" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="8" maxX="5" maxY="8"/>
+                    <state key="normal" title="Mark as Complete"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.7725490196" green="0.96078431369999995" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="43k-g5-zaw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="5Ha-FQ-2rC"/>
+                <constraint firstAttribute="bottom" secondItem="44J-74-E2i" secondAttribute="bottom" constant="25" id="B9Z-Q0-4T2"/>
+                <constraint firstItem="44J-74-E2i" firstAttribute="top" secondItem="uUm-Ox-Uyr" secondAttribute="bottom" constant="30" id="CXG-4J-pgO"/>
+                <constraint firstItem="44J-74-E2i" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ddv-XX-Vfd"/>
+                <constraint firstItem="uUm-Ox-Uyr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="IYn-SD-gJc"/>
+                <constraint firstItem="aVB-gZ-QuR" firstAttribute="top" secondItem="uUm-Ox-Uyr" secondAttribute="bottom" constant="32" id="M6s-j1-QxY"/>
+                <constraint firstItem="SHI-fI-kX9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="MdZ-RH-ssm"/>
+                <constraint firstItem="44J-74-E2i" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="U5r-h0-5Bo"/>
+                <constraint firstAttribute="trailing" secondItem="43k-g5-zaw" secondAttribute="trailing" constant="34" id="W3K-Nt-eXk"/>
+                <constraint firstItem="SHI-fI-kX9" firstAttribute="top" secondItem="43k-g5-zaw" secondAttribute="bottom" constant="25" id="aje-rU-zVT"/>
+                <constraint firstItem="JLk-Vl-xFC" firstAttribute="leading" secondItem="SHI-fI-kX9" secondAttribute="leading" id="d9H-MZ-bgu"/>
+                <constraint firstItem="uUm-Ox-Uyr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ef8-yH-ddE"/>
+                <constraint firstItem="JLk-Vl-xFC" firstAttribute="top" secondItem="SHI-fI-kX9" secondAttribute="bottom" constant="25" id="h07-MF-1eo"/>
+                <constraint firstItem="aVB-gZ-QuR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mmR-SD-1h5"/>
+                <constraint firstItem="uUm-Ox-Uyr" firstAttribute="top" secondItem="JLk-Vl-xFC" secondAttribute="bottom" constant="31" id="wNO-GO-ZXe"/>
+                <constraint firstItem="43k-g5-zaw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="zRh-VG-IXp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

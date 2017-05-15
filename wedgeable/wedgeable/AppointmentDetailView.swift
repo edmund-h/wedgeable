@@ -10,6 +10,15 @@ import UIKit
 
 class AppointmentDetailView: UIView, DetailView {
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var beginDateLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var contactInfoStack: UIStackView!
+    @IBOutlet weak var markCompleteButton: UIButton!
+    // the idea is that the completedView will remain hidden until marked complete, then the markCompleteButton will be hidden behind the view.
+    @IBOutlet weak var completedView: UIView!
+    @IBOutlet weak var needsFollowUpLabel: UILabel!
+    @IBOutlet weak var descriptionTextField: UITextView!
     
     weak var appointment: Appointment!
     

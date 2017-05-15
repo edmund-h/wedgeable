@@ -12,7 +12,6 @@ class ContactOverView: UIView, DetailView {
 
     weak var contact: Contact!
     
-    @IBOutlet weak var stackViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var contactInfoStackView: UIStackView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var dateMetLabel: UILabel!
