@@ -16,6 +16,7 @@
 		881A00201EC923AA00675433 /* ApplicationOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A001F1EC923AA00675433 /* ApplicationOverView.xib */; };
 		881FC86D1EBD3AE100477924 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* Extensions.swift */; };
 		8820A97B1ECA41E000951CC0 /* AppointmentDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */; };
+		8820A97D1ECCB4B800951CC0 /* FollowUpDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
 		886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */; };
@@ -85,6 +86,7 @@
 		881A001F1EC923AA00675433 /* ApplicationOverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationOverView.xib; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentDetailView.xib; sourceTree = "<group>"; };
+		8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowUpDetailView.xib; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				881A001B1EC8943F00675433 /* ContactOverView.xib */,
 				881A001F1EC923AA00675433 /* ApplicationOverView.xib */,
 				8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */,
+				8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
 				88C6CA421EB5109B00DFCF8C /* Main.storyboard in Resources */,
 				881A001C1EC8943F00675433 /* ContactOverView.xib in Resources */,
+				8820A97D1ECCB4B800951CC0 /* FollowUpDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
