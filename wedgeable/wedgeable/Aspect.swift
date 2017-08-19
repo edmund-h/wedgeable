@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum Aspect {
-    case profile, contacts, applications, followups, appointments, blogposts, projects
+enum Aspect: String {
+    case profile = "Profile", contacts = "Contacts", applications = "Applications", followups = "Followups", appointments = "Appointments", blogposts = "Blog Posts", projects = "Projects"
     
     static let all = [Aspect.profile, Aspect.applications, Aspect.followups, Aspect.appointments, Aspect.blogposts, Aspect.projects, Aspect.contacts]
     

@@ -12,6 +12,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     var events = Timeline()
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,12 @@ class MainViewController: UIViewController {
             dest.aspect = .blogposts
 //        case "profileSegue":
 //            return
+        case "detailSegue":
+            /*if let selectedRow = tableView.indexPathForSelectedRow?.row{
+                let detail = segue.destination as! DetailViewController
+                //todo: load event based on timeline entry
+                
+            }*/
         default:
             NSLog("%@", "MainView segue with bad identifier!")
             return

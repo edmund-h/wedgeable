@@ -18,8 +18,12 @@ class BlogPost: Event, TimelineEntry {
     var topic: String?
     var link: URL?
     var status: Status = .planned
-    var dueDate: Date
     var datePublished: Date?
+    
+    var dueDate : Date {
+        return self.date
+    }
+    
     var description: String {
         var withTopic = ""
         if let topic = topic { withTopic = "about \(topic) " }
@@ -37,7 +41,6 @@ class BlogPost: Event, TimelineEntry {
     }
     
     init(due: Date){
-        self.dueDate = due
         super.init(name: title, date: due, aspect: .blogposts)
     }
     

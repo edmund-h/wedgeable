@@ -10,13 +10,6 @@ import Foundation
 
 class Application: Event, NeedsFollowUp, Contactable {
     
-    enum Status: String {
-        case coldAppl = "Cold Application", informedAppl = "Informed Application", referAppl = "Referral Application", invitedAppl = "Invited Application"
-        case responded = "Responded", interviewed = "Interviewed", techInterviewed = "Technical Interviewed", cultureInterviewed = "Culture Interviewed", receivedOffer = "Received Offer", rejected = "Rejected", needConsultation = "Confer with Career Coach", lapsed = "Lapsed"
-        static let applTypes = [coldAppl, informedAppl, referAppl, invitedAppl]
-        static let all = applTypes + [responded, interviewed, techInterviewed, cultureInterviewed, receivedOffer, rejected, needConsultation, lapsed]
-    }
-    
     var company: String
     var position: String
     var postingURL: URL?
@@ -46,5 +39,12 @@ class Application: Event, NeedsFollowUp, Contactable {
         var contactString = ""
         if let method = method{ contactString += "\(method.rawValue): " }
         contactString += text
+    }
+    
+    enum Status: String {
+        case coldAppl = "Cold Application", informedAppl = "Informed Application", referAppl = "Referral Application", invitedAppl = "Invited Application"
+        case responded = "Responded", interviewed = "Interviewed", techInterviewed = "Technical Interviewed", cultureInterviewed = "Culture Interviewed", receivedOffer = "Received Offer", rejected = "Rejected", needConsultation = "Confer with Career Coach", lapsed = "Lapsed"
+        static let applTypes = [coldAppl, informedAppl, referAppl, invitedAppl]
+        static let all = applTypes + [responded, interviewed, techInterviewed, cultureInterviewed, receivedOffer, rejected, needConsultation, lapsed]
     }
 }
