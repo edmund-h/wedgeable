@@ -590,7 +590,7 @@
 				DEVELOPMENT_TEAM = H7DR849HVE;
 				INFOPLIST_FILE = wedgeable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bodela.wedgeable;
+				PRODUCT_BUNDLE_IDENTIFIER = bdl.wedgeable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -603,7 +603,7 @@
 				DEVELOPMENT_TEAM = H7DR849HVE;
 				INFOPLIST_FILE = wedgeable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bodela.wedgeable;
+				PRODUCT_BUNDLE_IDENTIFIER = bdl.wedgeable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
