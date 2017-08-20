@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CDApplication" representedClassName="CDApplication" syncable="YES" codeGenerationType="class">
+    <entity name="CDApplication" representedClassName="CDApplication" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="company" attributeType="String" syncable="YES"/>
         <attribute name="position" attributeType="String" syncable="YES"/>
         <attribute name="postingURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contactInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDContactInfo" inverseName="infoForAppl" inverseEntity="CDContactInfo" syncable="YES"/>
         <relationship name="hasAppt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDAppointment" inverseName="fromApplication" inverseEntity="CDAppointment" syncable="YES"/>
+        <relationship name="hasMilestone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDApplMilestone" inverseName="forAppl" inverseEntity="CDApplMilestone" syncable="YES"/>
     </entity>
-    <entity name="CDAppointment" representedClassName="CDAppointment" syncable="YES" codeGenerationType="class">
+    <entity name="CDApplMilestone" representedClassName="CDApplMilestone" syncable="YES" codeGenerationType="class">
+        <attribute name="complete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <relationship name="forAppl" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDApplication" inverseName="hasMilestone" inverseEntity="CDApplication" syncable="YES"/>
+    </entity>
+    <entity name="CDAppointment" representedClassName="CDAppointment" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="completed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,10 +24,16 @@
         <relationship name="fromContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDContact" inverseName="hasAppt" inverseEntity="CDContact" syncable="YES"/>
         <relationship name="withInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDContactInfo" inverseName="infoForAppt" inverseEntity="CDContactInfo" syncable="YES"/>
     </entity>
-    <entity name="CDBlogPost" representedClassName="CDBlogPost" syncable="YES" codeGenerationType="class">
+    <entity name="CDBlogPost" representedClassName="CDBlogPost" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="datePublished" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CDCommits" representedClassName="CDCommits" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="forProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDProject" inverseName="hasCommits" inverseEntity="CDProject" syncable="YES"/>
     </entity>
     <entity name="CDContact" representedClassName="CDContact" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
@@ -42,28 +56,41 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="hasFollowUp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFollowUp" inverseName="forEvent" inverseEntity="CDFollowUp" syncable="YES"/>
     </entity>
-    <entity name="CDFollowUp" representedClassName="CDFollowUp" syncable="YES" codeGenerationType="class">
+    <entity name="CDFollowUp" representedClassName="CDFollowUp" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="completionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="associatedContact" maxCount="1" deletionRule="Nullify" destinationEntity="CDContact" inverseName="needsFollowUp" inverseEntity="CDContact" syncable="YES"/>
         <relationship name="forEvent" maxCount="1" deletionRule="Nullify" destinationEntity="CDEvent" inverseName="hasFollowUp" inverseEntity="CDEvent" syncable="YES"/>
     </entity>
-    <entity name="CDProject" representedClassName="CDProject" syncable="YES" codeGenerationType="class">
+    <entity name="CDProject" representedClassName="CDProject" parentEntity="CDEvent" syncable="YES" codeGenerationType="class">
         <attribute name="contributors" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="images" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" attributeType="String" syncable="YES"/>
         <attribute name="technologies" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasCommits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCommits" inverseName="forProject" inverseEntity="CDCommits" syncable="YES"/>
+        <relationship name="hasMilestone" toMany="YES" deletionRule="Nullify" destinationEntity="CDProjectMilestone" inverseName="forProject" inverseEntity="CDProjectMilestone" syncable="YES"/>
+    </entity>
+    <entity name="CDProjectMilestone" representedClassName="CDProjectMilestone" syncable="YES" codeGenerationType="class">
+        <attribute name="attained" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" attributeType="String" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <attribute name="timesPushed" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="forProject" maxCount="1" deletionRule="Nullify" destinationEntity="CDProject" inverseName="hasMilestone" inverseEntity="CDProject" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDContact" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="CDContactInfo" positionX="-54" positionY="18" width="128" height="120"/>
-        <element name="CDEvent" positionX="-36" positionY="36" width="128" height="105"/>
-        <element name="CDAppointment" positionX="-27" positionY="63" width="128" height="150"/>
-        <element name="CDApplication" positionX="-18" positionY="108" width="128" height="120"/>
-        <element name="CDFollowUp" positionX="9" positionY="117" width="128" height="120"/>
-        <element name="CDProject" positionX="18" positionY="144" width="128" height="120"/>
-        <element name="CDBlogPost" positionX="-27" positionY="99" width="128" height="90"/>
+        <element name="CDContact" positionX="187" positionY="-162" width="128" height="135"/>
+        <element name="CDContactInfo" positionX="-236" positionY="-162" width="128" height="120"/>
+        <element name="CDEvent" positionX="-18" positionY="66" width="128" height="105"/>
+        <element name="CDAppointment" positionX="-47" positionY="-306" width="128" height="148"/>
+        <element name="CDApplication" positionX="-245" positionY="287" width="128" height="133"/>
+        <element name="CDFollowUp" positionX="216" positionY="332" width="128" height="118"/>
+        <element name="CDProject" positionX="-18" positionY="279" width="128" height="148"/>
+        <element name="CDBlogPost" positionX="331" positionY="18" width="128" height="88"/>
+        <element name="CDProjectMilestone" positionX="36" positionY="497" width="117" height="133"/>
+        <element name="CDApplMilestone" positionX="-252" positionY="470" width="128" height="118"/>
+        <element name="CDCommits" positionX="-101" positionY="495" width="128" height="103"/>
     </elements>
 </model>
