@@ -11,7 +11,7 @@
     <entity name="CDApplMilestone" representedClassName="CDApplMilestone" syncable="YES" codeGenerationType="class">
         <attribute name="complete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="desc" syncable="YES"/>
+        <attribute name="desc" attributeType="String" syncable="YES"/>
         <attribute name="status" attributeType="String" syncable="YES"/>
         <relationship name="forAppl" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDApplication" inverseName="hasMilestone" inverseEntity="CDApplication" syncable="YES"/>
     </entity>
@@ -81,8 +81,8 @@
         <relationship name="forProject" maxCount="1" deletionRule="Nullify" destinationEntity="CDProject" inverseName="hasMilestone" inverseEntity="CDProject" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDContact" positionX="187" positionY="-162" width="128" height="135"/>
-        <element name="CDContactInfo" positionX="-236" positionY="-162" width="128" height="120"/>
+        <element name="CDContact" positionX="187" positionY="-135" width="128" height="135"/>
+        <element name="CDContactInfo" positionX="-236" positionY="-135" width="128" height="120"/>
         <element name="CDEvent" positionX="-18" positionY="66" width="128" height="105"/>
         <element name="CDAppointment" positionX="-47" positionY="-306" width="128" height="148"/>
         <element name="CDApplication" positionX="-245" positionY="287" width="128" height="133"/>

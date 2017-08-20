@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
             dest.aspect = .blogposts
 //        case "profileSegue":
 //            return
-        case "detailSegue":
+        case "detailSegue": break
             /*if let selectedRow = tableView.indexPathForSelectedRow?.row{
                 let detail = segue.destination as! DetailViewController
                 //todo: load event based on timeline entry
