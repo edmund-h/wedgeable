@@ -8,4 +8,24 @@
 
 import Foundation
 
-// TODO: Extend Date to be CustomStringConvertible using NSDateFormatter
+extension Date {
+    
+    static func from(iso8601: String)-> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.date(from: iso8601)
+    }
+
+    func stringWithFormat(date dateStyle: DateFormatter.Style,
+                   time timeStyle: DateFormatter.Style )-> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateStyle = dateStyle
+        formatter.timeStyle = timeStyle
+        return formatter.string(from: self)
+    }
+    
+    func toISO8601()-> String {
+        let formatter = ISO8601DateFormatter()
+        return formatter.string(from: self)
+    }
+}

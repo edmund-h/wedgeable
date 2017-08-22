@@ -38,6 +38,15 @@ class Contact: Event, NeedsFollowUp, Contactable {
         }
     }
     
+    /*init? (id: String, dict: [String:Any]) {
+        if let name = dict ["name"] as? String,
+        let aspectStr = dict ["aspect"] as? String,
+        let aspectEnm = Aspect(rawValue: aspectStr),
+        let dateStr = dict ["date"] as? String,
+        let dateNSO = 
+    }*/
+    
+    
     func getAssociatedEvents()->Timeline {
         let timeline = Timeline(scope: .contacts)
         timeline.append(associatedEvents)

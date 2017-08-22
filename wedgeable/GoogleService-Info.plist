@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>516300135266-4vv3ivef6n9jvu0nedtm68f3ptd3p4rd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.516300135266-4vv3ivef6n9jvu0nedtm68f3ptd3p4rd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0Tca6xArJ57Dv6ib-qoZdSW4uzxyJINE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>516300135266</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>bdl.wedgeable</string>
+	<key>PROJECT_ID</key>
+	<string>wedgeable</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wedgeable.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:516300135266:ios:d67f0eb271e5b42d</string>
+	<key>DATABASE_URL</key>
+	<string>https://wedgeable.firebaseio.com</string>
+</dict>
+</plist>
