@@ -19,9 +19,11 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
     var duration: Double
     var userDescription: String?
     //TODO: Change all of these to event IDs
-    weak var associatedApplication: Application?
-    weak var associatedContact: Contact?
-    weak var followUp: FollowUp?
+    var applicationID: String?
+    var applDescription: String?
+    var contactID: String?
+    var contactDescription: String?
+    var followUpID: String?
     
     
     var startDate: Date {
@@ -37,11 +39,11 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
     var description: String {
         if let desc = userDescription { return desc }
         var details = ""
-        if let contact = associatedContact {
-            details += " with \(contact.name)"
+        if let contact = contactDescription {
+            details += contact
         }
-        if let appl = associatedApplication {
-            details += " of \(appl.company), for \(appl.position)"
+        if let appl = applDescription {
+            details += appl
         }
         return "\(name)\(details)"
     }//NOTE: Use name for a short description. Use description for a detailed description.
@@ -71,9 +73,20 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
         }
     }
     
+    func add(contact: Contact){
+        self.contactID = contact.id
+        self.contactDescription = " with \(contact.name)"
+    }
+    
+    func add(application: Application){
+        self.applicationID = application.id
+        self.applDescription = " of \(application.company), for \(application.position)"
+    }
+    
     func setCompleted() {
         self.completed = true
-        self.followUp = FollowUp(forEvent: self)
+        // TODO: rebuild this
+        //self.followUp = FollowUp(forEvent: self)
     }
     
     func setuserDescription(text: String) {

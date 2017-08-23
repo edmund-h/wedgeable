@@ -14,7 +14,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
     var company: String?
     var contactInfo: [FollowUp.Method : String] = [:]
     private var associatedEvents = [TimelineEntry]()
-    weak var followUp: FollowUp?
+    var followUpID: String?
     
     var dateMet: Date{
         return self.date
@@ -34,7 +34,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
         if fromEvent != nil {
             let followup = FollowUp(forEvent: self)
             followup.type = discernContactType(info: info)
-            self.followUp = followup
+            self.followUpID = followup.id
         }
     }
     
@@ -52,6 +52,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
                 // optional values come last
                 self.position = dict ["position"] as? String
                 self.company = dict ["company"] as? String
+                self.followUpID = dict ["followUpID"] as? String
         }
         else {
             return nil

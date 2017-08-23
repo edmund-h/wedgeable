@@ -16,7 +16,8 @@ class Application: Event, NeedsFollowUp, Contactable {
     var postingURL: URL?
     var contactInfo: [FollowUp.Method : String] = [:]
     weak var timeline: Timeline?
-    weak var followUp: FollowUp? //TODO: Connect this to an id rather than an obj
+    var followUpID: String?
+    var needsFollowup: Bool = false
     var dateApplied: Date{
         return self.date
     }
@@ -40,13 +41,14 @@ class Application: Event, NeedsFollowUp, Contactable {
                 self.position = position
                 self.status = statusEnm
                 super.init(name: "\(position), \(company)", date: dateNSO, aspect: .applications, id: id)
+                self.followUpID = dict["followUpID"] as? String
         }else{
             return nil
         }
         
         if let timelineDict = dict["timeline"] as? [String: Any],
             timelineDict.keys.count > 0 {
-            var myTimeline = Timeline(scope: .applications)
+            let myTimeline = Timeline(scope: .applications)
             myTimeline.getEntriesFrom(dict: timelineDict)
             self.timeline = myTimeline
         }
@@ -57,7 +59,8 @@ class Application: Event, NeedsFollowUp, Contactable {
         if let description = description { des = description }
         let milestone = ApplyMilestone(status: status, date: date, description: des, complete: false)
         timeline?.append(milestone)
-        self.followUp = FollowUp(forEvent: self)
+        let followUp = FollowUp(forEvent: self)
+        self.followUpID = followUp.id
     }
     
     func addContactInfo(from text: String, with method: FollowUp.Method?) {
