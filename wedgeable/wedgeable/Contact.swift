@@ -30,7 +30,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
     init(name: String, metAt: String, info: String, fromEvent: Event?) {
         let now = Date(timeIntervalSinceNow: 0)
         self.placeMet = metAt
-        super.init(name: name, date: now, aspect: .contacts)
+        super.init(name: name, date: now, aspect: .contacts, id: "VOID")
         if fromEvent != nil {
             let followup = FollowUp(forEvent: self)
             followup.type = discernContactType(info: info)
@@ -38,13 +38,25 @@ class Contact: Event, NeedsFollowUp, Contactable {
         }
     }
     
-    /*init? (id: String, dict: [String:Any]) {
+    init? (id: String, dict: [String:Any]) {
         if let name = dict ["name"] as? String,
-        let aspectStr = dict ["aspect"] as? String,
-        let aspectEnm = Aspect(rawValue: aspectStr),
-        let dateStr = dict ["date"] as? String,
-        let dateNSO = 
-    }*/
+            let dateStr = dict ["date"] as? String,
+            let dateNSO = Date.from(iso8601: dateStr),
+            let id = dict ["id"] as? String,
+            let placeMet = dict ["placeMet"] as? String,
+            let infoDict = dict ["contactInfo"] as? [String:Any] {
+                self.placeMet = placeMet
+                super.init(name: name, date: dateNSO, aspect: .contacts, id: id)
+                // separated out contact glean logic
+                getContactInfo(from: infoDict)
+                // optional values come last
+                self.position = dict ["position"] as? String
+                self.company = dict ["company"] as? String
+        }
+        else {
+            return nil
+        }
+    }
     
     
     func getAssociatedEvents()->Timeline {
@@ -55,6 +67,15 @@ class Contact: Event, NeedsFollowUp, Contactable {
     
     func addAssociatedEvent(_ event: TimelineEntry){
         self.associatedEvents.append(event)
+    }
+    
+    private func getContactInfo(from dict: [String:Any]) {
+        for key in dict.keys {
+            guard let method = FollowUp.Method(rawValue: key),
+            let info = dict[key] as? String
+                else { continue }
+            contactInfo[method] = info
+        }
     }
 }
 

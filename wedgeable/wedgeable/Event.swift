@@ -15,7 +15,7 @@ class Event {
     var date: Date
     var aspect: Aspect
     
-    init (name: String, date: Date, aspect: Aspect/*, id: String*/) {
+    init (name: String, date: Date, aspect: Aspect, id: String) {
         self.name = name
         self.date = date
        // self.id = id

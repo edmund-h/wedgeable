@@ -28,16 +28,31 @@ class Timeline {
         self.scope = scope
     }
     
+    func getEntriesFrom(dict: [String: Any]) {
+        for key in dict.keys {
+            guard let entryDict = dict [key] as? [String: Any]
+                else { continue }
+            if let entry = Timeline.makeEntry(from: entryDict){
+                append(entry)
+            }
+        }
+    }
+    
+    func append(_ entry: TimelineEntry) {
+        if var entries = collection[entry.date]{
+            entries.append(entry)
+            collection[entry.date] = entries
+        } else {
+            collection[entry.date] = [entry]
+        }
+    }
+    
     func append(_ elements: [TimelineEntry]) {
         elements.forEach({
-            if var entries = collection[$0.date]{
-                entries.append($0)
-                collection[$0.date] = entries
-            } else {
-                collection[$0.date] = [$0]
-            }
+            append($0)
         })
     }
+    
     
     func append(timeline: Timeline) {
         timeline.collection.keys.forEach({
@@ -73,31 +88,20 @@ class Timeline {
         let entries = getEntries()
         return entries[ordinal]
     }
-}
-
-struct ApplyMilestone: TimelineEntry {
-    var status: Application.Status
-    var date: Date
-    var description: String
-    var complete: Bool
-}
-
-struct ProjectMilestone: TimelineEntry {
-    var status: Project.Status
-    var date: Date
-    var timesPushed: Int = 0
-    var description: String
-    var attained: Bool
-}
-
-struct Commits: TimelineEntry {
-    var date: Date
-    var number: Int
-    var description: String
     
+    static func makeEntry(from dict: [String: Any])-> TimelineEntry? {
+        guard let type = dict["type"] as? String else { return nil }
+        switch type {
+        case "commits":
+            return Commits(dict: dict)
+        case "projectMilestone":
+            return ProjectMilestone(dict: dict)
+        case "applyMilestone":
+            return ApplyMilestone(dict: dict)
+        default:
+            return nil
+        }
+    }
 }
 
-protocol TimelineEntry {
-    var date: Date { get set }
-    var description: String { get }
-}
+

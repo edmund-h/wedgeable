@@ -11,6 +11,7 @@ import Foundation
 class FollowUp: Event, TimelineEntry {
     
     //TODO: there is a possible issue with the event to which this followup is attached being deallocated, and that deallocates the Followup. We have to declare events in a way that is persistent or figure out how to relate a FU to an event without a direct reference
+    // SOLUTION: change event: Event to associatedEvent: String which will be an event ID
     unowned var event: Event
     weak var associatedContact: Contact?
     enum Method: String {
@@ -37,8 +38,9 @@ class FollowUp: Event, TimelineEntry {
         self.complete = false
         let date = event.date.addingTimeInterval(86400) //1 day in seconds
         
-        super.init(name: event.name, date: date, aspect: .followups)
+        super.init(name: event.name, date: date, aspect: .followups, id: "VOID")
     }
+    
     
     func markCompleted() {
         self.complete = true
@@ -53,7 +55,6 @@ protocol NeedsFollowUp {
 extension NeedsFollowUp {
     func needsFollowUp()-> Bool {
         guard let followUp = followUp else {return false}
-        let alreadyFollowedUp = followUp.complete == true
-        return alreadyFollowedUp
+        return followUp.complete
     }
 }

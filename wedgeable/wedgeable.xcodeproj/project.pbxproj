@@ -17,6 +17,7 @@
 		881AEA501F4A36E1005F2B2E /* PushFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AEA4F1F4A36E1005F2B2E /* PushFirebase.swift */; };
 		881AEA521F4A372A005F2B2E /* QueryFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AEA511F4A372A005F2B2E /* QueryFirebase.swift */; };
 		881AEA541F4CC083005F2B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 881AEA531F4CC083005F2B2E /* GoogleService-Info.plist */; };
+		881AEA561F4CF6B6005F2B2E /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AEA551F4CF6B6005F2B2E /* TimelineEntry.swift */; };
 		881FC86D1EBD3AE100477924 /* AppleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* AppleExtensions.swift */; };
 		8820A97B1ECA41E000951CC0 /* AppointmentDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */; };
 		8820A97D1ECCB4B800951CC0 /* FollowUpDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */; };
@@ -96,6 +97,7 @@
 		881AEA4F1F4A36E1005F2B2E /* PushFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushFirebase.swift; sourceTree = "<group>"; };
 		881AEA511F4A372A005F2B2E /* QueryFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryFirebase.swift; sourceTree = "<group>"; };
 		881AEA531F4CC083005F2B2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		881AEA551F4CF6B6005F2B2E /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		881FC86C1EBD3AE100477924 /* AppleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleExtensions.swift; sourceTree = "<group>"; };
 		8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentDetailView.xib; sourceTree = "<group>"; };
 		8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowUpDetailView.xib; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				88FA1D831EB5AC2600100B32 /* Timeline.swift */,
 				886360BA1EB789580011A7C9 /* Contactable.swift */,
 				886360E01EBA7C000011A7C9 /* Profile.swift */,
+				881AEA551F4CF6B6005F2B2E /* TimelineEntry.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				88B230B51EBF8FF600F6043F /* OverViewCell.swift in Sources */,
 				886360E31EBAAEA10011A7C9 /* SettingsViewController.swift in Sources */,
 				886360CF1EB7A3D60011A7C9 /* SectionViewController.swift in Sources */,
+				881AEA561F4CF6B6005F2B2E /* TimelineEntry.swift in Sources */,
 				886360C91EB79BF40011A7C9 /* FollowUpsView.swift in Sources */,
 				88BC8DD21EB5153E00D7EAE2 /* MainViewController.swift in Sources */,
 				88B230AB1EBF87EC00F6043F /* FollowUpDetailView.swift in Sources */,

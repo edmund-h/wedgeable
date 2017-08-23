@@ -18,6 +18,7 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
     var type: OfType
     var duration: Double
     var userDescription: String?
+    //TODO: Change all of these to event IDs
     weak var associatedApplication: Application?
     weak var associatedContact: Contact?
     weak var followUp: FollowUp?
@@ -49,7 +50,25 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
         self.type = type
         self.duration = duration
         self.address = address
-        super.init(name: "\(type.rawValue) at \(address)", date: starting, aspect: .appointments)
+        super.init(name: "\(type.rawValue) at \(address)", date: starting, aspect: .appointments, id: "VOID")
+    }
+    
+    init?(id: String, dict: [String:Any]) {
+        if let addrStr = dict ["address"] as? String,
+            let typeStr = dict ["type"] as? String,
+            let typeEnm = OfType(rawValue: typeStr),
+            let dateStr = dict ["starting"] as? String,
+            let starting = Date.from(iso8601: dateStr),
+            let durStr = dict ["duration"] as? String,
+            let durDbl = Double(durStr) {
+                self.type = typeEnm
+                self.duration = durDbl
+                self.address = addrStr
+                super.init(name: "\(typeEnm.rawValue) at \(address)", date: starting, aspect: .appointments, id: id)
+
+        } else {
+            return nil
+        }
     }
     
     func setCompleted() {
