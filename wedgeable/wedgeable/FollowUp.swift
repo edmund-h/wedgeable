@@ -11,13 +11,12 @@ import Foundation
 class FollowUp: Event, TimelineEntry {
     
     var parentEventID: String
+    var complete: Bool
     var contactID: String?
     enum Method: String {
         case phone = "Phone", email = "eMail", inPerson = "In Person", socialMedia = "Social Media", mail = "Mail", gift = "Gift", goal = "Goal"
     }
-    
-    var type: Method?
-    var complete: Bool
+    var method: Method?
     var completionDate: Date?
     
     var hoursRemaining: Double {
@@ -27,7 +26,7 @@ class FollowUp: Event, TimelineEntry {
     }
     var description: String {
         var needed = "Needed"
-        if let type = type { needed = type.rawValue }
+        if let method = method { needed = method.rawValue }
         return "\(needed) follow-up on \(name)"
     }
     
@@ -39,7 +38,31 @@ class FollowUp: Event, TimelineEntry {
         super.init(name: event.name, date: date, aspect: .followups, id: "VOID")
     }
     
-    //todo: dictionary init
+    init? (id: String, dict: [String: Any]) {
+        if let name = dict["name"] as? String,
+            let dateStr = dict["date"] as? String,
+            let dateNSO = Date.from(iso8601: dateStr),
+            let parentEventID = dict ["parentEventID"] as? String,
+            let completeStr = dict ["complete"] as? String,
+            let completeBool = Bool(completeStr) {
+                self.parentEventID = parentEventID
+                self.complete = completeBool
+                super.init(name: name, date: dateNSO, aspect: .followups, id: id)
+                // optionals
+                let contactID = dict["contactID"] as? String?
+        } else {
+            return nil
+        }
+        // non string optionals
+        if let methodStr = dict ["method"] as? String,
+            let methodEnm = FollowUp.Method(rawValue: methodStr){
+                self.method = methodEnm
+        }
+        if let completionStr = dict["completionDate"] as? String,
+            let completionDate = Date.from(iso8601: completionStr){
+                self.completionDate = completionDate
+        }
+    }
     
     
     func markCompleted() {
