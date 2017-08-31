@@ -63,6 +63,7 @@ class BlogPost: Event, TimelineEntry {
             self.status = statusEnm
         }
         if let linkStr = dict ["link"] as? String {
+            // ⬇️ is sent to firebase as link.absoluteString
             self.link = URL(string: linkStr)
         }
         if let datePub = dict ["datePublished"] as? String {

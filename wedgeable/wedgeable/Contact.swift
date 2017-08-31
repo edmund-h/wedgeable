@@ -33,7 +33,7 @@ class Contact: Event, NeedsFollowUp, Contactable {
         super.init(name: name, date: now, aspect: .contacts, id: "VOID")
         if fromEvent != nil {
             let followup = FollowUp(forEvent: self)
-            followup.type = discernContactType(info: info)
+            followup.method = discernContactType(info: info)
             self.followUpID = followup.id
         }
     }
@@ -42,7 +42,6 @@ class Contact: Event, NeedsFollowUp, Contactable {
         if let name = dict ["name"] as? String,
             let dateStr = dict ["date"] as? String,
             let dateNSO = Date.from(iso8601: dateStr),
-            let id = dict ["id"] as? String,
             let placeMet = dict ["placeMet"] as? String,
             let infoDict = dict ["contactInfo"] as? [String:Any] {
                 self.placeMet = placeMet

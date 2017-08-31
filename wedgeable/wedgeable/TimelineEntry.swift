@@ -12,6 +12,7 @@ import Foundation
 protocol TimelineEntry {
     var date: Date { get set }
     var description: String { get }
+    var jsonDict: [String:Any] { get }
 }
 
 struct ApplyMilestone: TimelineEntry {
@@ -20,7 +21,7 @@ struct ApplyMilestone: TimelineEntry {
     var description: String
     var complete: Bool
 }
-
+// dictionary inits must be in a separate extension in order to preserve piecewise initializer
 extension ApplyMilestone {
     init? (dict: [String: Any]) {
         if let statusStr = dict["status"] as? String,

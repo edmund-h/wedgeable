@@ -35,7 +35,7 @@ class Application: Event, NeedsFollowUp, Contactable {
             let position = dict["position"] as? String,
             let dateStr = dict["dateApplied"] as? String,
             let dateNSO = Date.from(iso8601: dateStr),
-            let statusStr = dict["Status"] as? String,
+            let statusStr = dict["status"] as? String,
             let statusEnm = Application.Status(rawValue: statusStr){
                 self.company = company
                 self.position = position

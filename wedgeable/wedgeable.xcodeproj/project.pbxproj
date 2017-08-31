@@ -21,6 +21,7 @@
 		881FC86D1EBD3AE100477924 /* AppleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC86C1EBD3AE100477924 /* AppleExtensions.swift */; };
 		8820A97B1ECA41E000951CC0 /* AppointmentDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */; };
 		8820A97D1ECCB4B800951CC0 /* FollowUpDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */; };
+		884808031F57F50B00143323 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884808021F57F50B00143323 /* JSONable.swift */; };
 		886360BB1EB789580011A7C9 /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360BA1EB789580011A7C9 /* Contactable.swift */; };
 		886360C31EB79B2F0011A7C9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C21EB79B2F0011A7C9 /* ContactsView.swift */; };
 		886360C51EB79B7B0011A7C9 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */; };
@@ -101,6 +102,7 @@
 		881FC86C1EBD3AE100477924 /* AppleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleExtensions.swift; sourceTree = "<group>"; };
 		8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentDetailView.xib; sourceTree = "<group>"; };
 		8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowUpDetailView.xib; sourceTree = "<group>"; };
+		884808021F57F50B00143323 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
 		886360BA1EB789580011A7C9 /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
 		886360C21EB79B2F0011A7C9 /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		886360C41EB79B7B0011A7C9 /* BlogPostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				881AEA4F1F4A36E1005F2B2E /* PushFirebase.swift */,
 				881AEA511F4A372A005F2B2E /* QueryFirebase.swift */,
+				884808021F57F50B00143323 /* JSONable.swift */,
 			);
 			name = "Firebase Client";
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				88BC8DD61EB536BF00D7EAE2 /* Secrets.swift in Sources */,
 				881A00121EC5188100675433 /* DetailViewController.swift in Sources */,
 				881A001E1EC8A6CD00675433 /* ContactOverView.swift in Sources */,
+				884808031F57F50B00143323 /* JSONable.swift in Sources */,
 				8882FEB51EB56941001B210A /* Appointment.swift in Sources */,
 				881A001A1EC8922300675433 /* ViewProtocols.swift in Sources */,
 				88FBC5401EB66C74003106E5 /* Date.swift in Sources */,

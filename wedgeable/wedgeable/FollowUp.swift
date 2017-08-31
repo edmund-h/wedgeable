@@ -49,7 +49,7 @@ class FollowUp: Event, TimelineEntry {
                 self.complete = completeBool
                 super.init(name: name, date: dateNSO, aspect: .followups, id: id)
                 // optionals
-                let contactID = dict["contactID"] as? String?
+                self.contactID = dict["contactID"] as? String
         } else {
             return nil
         }

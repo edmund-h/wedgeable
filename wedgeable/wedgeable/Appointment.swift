@@ -66,6 +66,11 @@ class Appointment: Event, NeedsFollowUp, TimelineEntry {
                 self.type = typeEnm
                 self.duration = durDbl
                 self.address = addrStr
+                self.applicationID = dict ["applicationID"] as? String
+                self.applDescription = dict ["applDescription"] as? String
+                self.contactID = dict ["contactID"] as? String
+                self.contactDescription = dict ["contactDescription"] as? String
+                self.followUpID = dict ["followUpID"] as? String
                 super.init(name: "\(typeEnm.rawValue) at \(address)", date: starting, aspect: .appointments, id: id)
 
         } else {
