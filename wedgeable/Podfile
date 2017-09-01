@@ -7,6 +7,8 @@ target 'wedgeable' do
 
   # Pods for wedgeable
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
   target 'wedgeableTests' do
     inherit! :search_paths

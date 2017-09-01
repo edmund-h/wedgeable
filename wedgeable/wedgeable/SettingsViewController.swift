@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
@@ -25,6 +26,8 @@ class SettingsViewController: UIViewController {
             nameField.text = name
             startPicker.date = Date(timeIntervalSince1970: startIntrvl)
             endPicker.date = Date(timeIntervalSince1970: endIntrvl)
+        } else if let user = GIDSignIn.sharedInstance().currentUser {
+            nameField.text = user.profile.name
         }
         // Do any additional setup after loading the view.
     }

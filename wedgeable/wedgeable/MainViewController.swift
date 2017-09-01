@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleSignIn
 
 class MainViewController: UIViewController {
     
@@ -23,11 +24,21 @@ class MainViewController: UIViewController {
                 events.append(things)
             }
         })
+        
+        if GIDSignIn.sharedInstance().currentUser == nil {
+            let signInVC = SignInViewController(
+                nibName: "SignInViewController",
+                bundle: Bundle.main
+            )
+            present(signInVC, animated: false, completion: nil)
+            let complete = Notification.Name.init("SignInComplete")
+            NotificationCenter.default.addObserver(self, selector: #selector(pushSettingsVC) , name: complete, object: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let id = segue.identifier else {return}
-        let dest = segue.destination as! SectionViewController
+        guard let id = segue.identifier,
+        let dest = segue.destination as? SectionViewController else {return}
         switch id {
         case "applicationSegue":
             dest.aspect = .applications
@@ -53,6 +64,12 @@ class MainViewController: UIViewController {
             NSLog("%@", "MainView segue with bad identifier!")
             return
         }
+    }
+    
+    func pushSettingsVC(){
+        performSegue(withIdentifier: "settingsSegue", sender: nil)
+        let complete = Notification.Name.init("SignInComplete")
+        NotificationCenter.default.removeObserver(self, name: complete, object: nil)
     }
     
 }

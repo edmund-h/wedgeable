@@ -15,9 +15,10 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let myProfile = Profile.getProfile()
-        self.profile = myProfile
-        self.title = myProfile.name
+        if let myProfile = Profile.getProfile() {
+            self.profile = myProfile
+            self.title = myProfile.name
+        }
         // TODO: Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }

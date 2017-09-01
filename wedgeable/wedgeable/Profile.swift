@@ -21,7 +21,8 @@ struct Profile {
     
     static var data = UserDefaults.standard
     
-    private init(name: String, start: Date, end: Date, sheet: URL?, git: URL?) {
+    private init?(name: String, start: Date?, end: Date?, sheet: URL?, git: URL?) {
+        guard let start = start, let end = end else { return nil }
         self.name = name
         self.startDate = start
         self.endDate = end
@@ -33,10 +34,10 @@ struct Profile {
     
     static func setCriticalUserData(name: String, start: Date, end: Date) {
         data.set(name, forKey: "name")
-        let startInterval = start.timeIntervalSince1970
-        let endInterval = end.timeIntervalSince1970
-        data.set(startInterval, forKey: "start")
-        data.set(endInterval, forKey: "end")
+        let startString = start.toISO8601()
+        let endString = end.toISO8601()
+        data.set(startString, forKey: "start")
+        data.set(endString, forKey: "end")
     }
     
     static func setUrl(_ text: String, forService: webData )-> Bool {
@@ -45,11 +46,16 @@ struct Profile {
         return true
     }
     
-    static func getProfile()-> Profile {
+    static func getProfile()-> Profile? {
+        guard let nameString = data.string(forKey: "name"),
+            let startString = data.string(forKey: "start"),
+            let endString = data.string(forKey: "end") else {
+                return nil
+        }
         return Profile(
-            name: data.string(forKey: "name") ?? "",
-            start: Date(timeIntervalSince1970: data.double(forKey: "start")),
-            end: Date(timeIntervalSince1970: data.double(forKey: "start")),
+            name: nameString,
+            start: Date.from(iso8601: startString),
+            end: Date.from(iso8601: endString),
             sheet: data.url(forKey: "sheet"),
             git: data.url(forKey: "git")
         )

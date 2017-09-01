@@ -67,6 +67,8 @@
 		88C6CA471EB5109B00DFCF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA461EB5109B00DFCF8C /* Assets.xcassets */; };
 		88C6CA4A1EB5109B00DFCF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6CA481EB5109B00DFCF8C /* LaunchScreen.storyboard */; };
 		88C6CA551EB5109B00DFCF8C /* wedgeableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */; };
+		88D0DB221F582A4600F55603 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D0DB211F582A4600F55603 /* SignInViewController.xib */; };
+		88D0DB241F582D9600F55603 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D0DB231F582D9600F55603 /* SignInViewController.swift */; };
 		88FA1D841EB5AC2600100B32 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA1D831EB5AC2600100B32 /* Timeline.swift */; };
 		88FBC5401EB66C74003106E5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBC53F1EB66C74003106E5 /* Date.swift */; };
 		95CBD5432A102EE971ADE23B /* Pods_wedgeable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0492A7723729D63F3BE7F387 /* Pods_wedgeable.framework */; };
@@ -152,6 +154,8 @@
 		88C6CA501EB5109B00DFCF8C /* wedgeableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wedgeableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6CA541EB5109B00DFCF8C /* wedgeableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wedgeableTests.swift; sourceTree = "<group>"; };
 		88C6CA561EB5109B00DFCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D0DB211F582A4600F55603 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		88D0DB231F582D9600F55603 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		88FA1D831EB5AC2600100B32 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		88FBC53F1EB66C74003106E5 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A8ACC830EF91DBC5A21FCFA6 /* Pods-wedgeable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wedgeable.release.xcconfig"; path = "Pods/Target Support Files/Pods-wedgeable/Pods-wedgeable.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				881A001F1EC923AA00675433 /* ApplicationOverView.xib */,
 				8820A97A1ECA41E000951CC0 /* AppointmentDetailView.xib */,
 				8820A97C1ECCB4B800951CC0 /* FollowUpDetailView.xib */,
+				88D0DB211F582A4600F55603 /* SignInViewController.xib */,
 			);
 			name = "Nibs & Storyboards";
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				881A00111EC5188100675433 /* DetailViewController.swift */,
 				886360DE1EBA6C160011A7C9 /* ProfileViewController.swift */,
 				886360E21EBAAEA10011A7C9 /* SettingsViewController.swift */,
+				88D0DB231F582D9600F55603 /* SignInViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				88B230B71EBFA2A000F6043F /* ProjectOverView.xib in Resources */,
 				881A000E1EC4E81B00675433 /* PostWebView.xib in Resources */,
 				881AEA541F4CC083005F2B2E /* GoogleService-Info.plist in Resources */,
+				88D0DB221F582A4600F55603 /* SignInViewController.xib in Resources */,
 				881A00201EC923AA00675433 /* ApplicationOverView.xib in Resources */,
 				886360EC1EBBBB480011A7C9 /* ApplicationsView.xib in Resources */,
 				886360E61EBAC7C40011A7C9 /* AppointmentsView.xib in Resources */,
@@ -605,6 +612,7 @@
 				88B230B91EBFC1F100F6043F /* TimelineViewController.swift in Sources */,
 				88BC8DDC1EB5418D00D7EAE2 /* Aspect.swift in Sources */,
 				88B230A31EBF868100F6043F /* ApplicationOverView.swift in Sources */,
+				88D0DB241F582D9600F55603 /* SignInViewController.swift in Sources */,
 				886360CD1EB79C240011A7C9 /* ApplicationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
